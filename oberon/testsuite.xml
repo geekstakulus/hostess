@@ -124,21 +124,11 @@
       (with the exception of a possibly different newline character).
     </test>
   
-    <test id="baseline7" type="run" relevance="informal" file="HOTBaselineOutput2.Mod" output="HOTBaselineOutput2.Ref">
-      Tests integer output for <code>SHORTINT</code>:
-      padding, sign, alignment.
-    </test>
-    
-    <test id="baseline8" type="run" relevance="informal" file="HOTBaselineOutput3.Mod" output="HOTBaselineOutput2.Ref">
-      Tests integer output for <code>INTEGER</code>:
-      padding, sign, alignment.
-    </test>
-    
-    <test id="baseline9" type="run" relevance="informal" file="HOTBaselineOutput4.Mod" output="HOTBaselineOutput2.Ref">
+    <test id="baseline8" type="run" relevance="informal" file="HOTBaselineOutput3.Mod" output="HOTBaselineOutput3.Ref">
       Tests integer output for <code>LONGINT</code>:
       padding, sign, alignment.
     </test>
-  
+    
     <test id="baseline10" type="run" file="HOTBaselineOutput5.Mod"
   	output="HOTBaselineOutput5.Ref">
       Tests character output.  Not much to test, though.
