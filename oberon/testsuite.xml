@@ -98,15 +98,15 @@
         import variables from export0
     </test>
 
-    <test id="duplicate import" type="reject" file= "HOTDoubleImport.Mod" >
+    <test id="duplicateImport" type="reject" file= "HOTDoubleImport.Mod" >
         duplicate import
     </test>
     
-    <test id="duplicate import 1" type="reject" file= "HOTDoubleImport1.Mod" >
+    <test id="duplicateImport1" type="reject" file= "HOTDoubleImport1.Mod" >
         duplicate import
     </test>
 
-    <test id="failed import" type="reject" file= "HOTFailedImport.Mod" >
+    <test id="failedImport" type="reject" file= "HOTFailedImport.Mod" >
          failed import
     </test>
 
@@ -286,7 +286,7 @@
         loop statement
     </test>
     
-    <test id="built-in functions 0" type="run" file= "HOTBuiltIn0.Mod">
+    <test id="builtInFunctions0" type="run" file= "HOTBuiltIn0.Mod">
         CAP CHR ODD ABS ASH
     </test>
 
@@ -323,16 +323,16 @@
         procedure returning a record
     </test>
 
-    <test id="ao method error 0" type="reject" file= "HOTMethodError0.Mod" lang="AO" >
+    <test id="aoMethodError0" type="reject" file= "HOTMethodError0.Mod" lang="AO" >
         method overriding with different signature
     </test>
-    <test id="ao method error 1" type="reject" file= "HOTMethodError1.Mod" lang="AO" >
+    <test id="aoMethodError1" type="reject" file= "HOTMethodError1.Mod" lang="AO" >
         method overriding with different signature
     </test>
-    <test id="ao method error 2" type="reject" file= "HOTMethodError2.Mod" lang="AO" >
+    <test id="aoMethodError2" type="reject" file= "HOTMethodError2.Mod" lang="AO" >
         method overriding with different signature
     </test>
-    <test id="ao method error 3" type="reject" file= "HOTMethodError3.Mod" lang="AO" >
+    <test id="aoMethodError3" type="reject" file= "HOTMethodError3.Mod" lang="AO" >
         method overriding with different signature
     </test>
 
@@ -346,7 +346,7 @@
         ARRAY OF SYSTEM.BYTE
     </test>
     
-    <test id="special cast 0" type="reject" relevance="informal" file= "HOTSpecialCast0.Mod" >
+    <test id="specialCast0" type="reject" relevance="informal" file= "HOTSpecialCast0.Mod" >
         cast PTR to POINTER TO ARRAY 5 OF CHAR
         a dynamic array has no type descriptor, this is not possible
     </test>
@@ -363,17 +363,17 @@
         'nightmare' bug in OP2 for ETH Oberon. Exporting a type that was previously exported as record
         created ghost structures and made the compiler crash
     -->
-    <test id="specialexport1, export " type="accept" relevance="informal" file= "HOTSpecialExport1.Mod" ></test>
-    <test id="specialexport1, import " type="accept" relevance="informal" file= "HOTSpecialExport2.Mod" ></test>
-    <test id="specialexport1, export A" type="accept" relevance="informal" file= "HOTSpecialExport1.A.Mod" ></test>
-    <test id="specialexport1, import A" type="accept" relevance="informal" file= "HOTSpecialExport2.A.Mod" ></test>
-    <test id="specialexport1, export B" type="accept" relevance="informal" file= "HOTSpecialExport1.B.Mod" ></test>
-    <test id="specialexport1, import B" type="fail" relevance="informal" file= "HOTSpecialExport2.B.Mod" ></test>
+    <test id="specialexport1export " type="accept" relevance="informal" file= "HOTSpecialExport1.Mod" ></test>
+    <test id="specialexport1import " type="accept" relevance="informal" file= "HOTSpecialExport2.Mod" ></test>
+    <test id="specialexport1A" type="accept" relevance="informal" file= "HOTSpecialExport1.A.Mod" ></test>
+    <test id="specialexport2A" type="accept" relevance="informal" file= "HOTSpecialExport2.A.Mod" ></test>
+    <test id="specialexport1B" type="accept" relevance="informal" file= "HOTSpecialExport1.B.Mod" ></test>
+    <test id="specialexport2B" type="reject" relevance="informal" file= "HOTSpecialExport2.B.Mod" ></test>
 
-    <test id="sys builtin 0" type="run" relevance="informal" file= "HOTSysBuiltIn0.Mod" >
+    <test id="sysBuiltin0" type="run" relevance="informal" file= "HOTSysBuiltIn0.Mod" >
     </test>
 
-    <test id="duplicate fingerprint" type="run" relevance="informal" file= "HOTDuplFP.Mod" >
+    <test id="duplicateFingerprint" type="accept" relevance="informal" file= "HOTDuplFP.Mod" >
         OP2/ ETH Oberon
         this module generates duplicate fingerprints 
     </test>
