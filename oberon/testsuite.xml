@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <testcases
-    profile="Testcases for Oberon language consumers"
+    profile="SIMPLE PARSER TESTS"
     default-lang="O1 O2 AO">
-
-<!-- Part1: SIMPLE PARSER TESTS 
-    these tests are very simple, to allow developers implementing a new
-    compiler to test simple basic patterns. Only reject and accept tests here.
--->
 
     <test id="baseline1" type="reject" file="HOTBaselineReject1.Mod">
         Test file is <em>completely</em> empty.  The compiler should
@@ -133,9 +128,13 @@
   	output="HOTBaselineOutput5.Ref">
       Tests character output.  Not much to test, though.
     </test>
-    
-    
-<!-- Part3: BUILT-IN TYPES -->
+
+</testcases>
+
+
+<testcases
+    profile="BUILT-IN TYPES"
+    default-lang="O1 O2 AO">
 
     <test id="int0" type="run" file= "HOTInt0.Mod">
         test integer constants, conversions, operators
@@ -170,9 +169,11 @@
         reals
     </test>
 
+</testcases>
 
-
-<!-- Part4: RECORDS  -->
+<testcases
+    profile="RECORDS"
+    default-lang="O1 O2 AO">
 
     <test id="record0" type="accept" file= "HOTRecord0.Mod">
         empty record declaration
@@ -246,18 +247,31 @@
         recursive type declaration
     </test>
 
+</testcases>
 
-<!-- Part5: ARRAYS -->
+
+<testcases
+    profile="ARRAYS"
+    default-lang="O1 O2 AO">
+    
     <test id="array0" type="run" file= "HOTArray0.Mod">
         single dimensional array festival
     </test>
     
+    <test id="array2" type="reject" file="HOTArray2.Mod">
+      Declares an array type of negative length.
+    </test>
+
     <test id="string0" type="run" file= "HOTString0.Mod">
         string tests
     </test>
 
+</testcases>
 
-<!-- Part6: PROCEDURE TYPES -->
+
+<testcases
+    profile="PROCEDURE TYPES"
+    default-lang="O1 O2 AO">
 
     <test id="proc0" type="accept" file= "HOTProc0.Mod">
         procedure variables: declaration, assignment, parameter passing
@@ -295,13 +309,29 @@
         importing proc types
     </test>
 
-<!-- Part7: Accessing variables: import/export, local procedures -->
+    <test id="procvar1" type="accept" relevance="informal" file="HOTProcVar1.Mod">
+      If this test passes, then the compiler applies the same relaxed
+      type rules to the comparison of procedure values as to the
+      assignment of procedure values.
+    </test>
+
+</testcases>
+
+
+<testcases
+    profile="Accessing variables: import/export, local procedures"
+    default-lang="O1 O2 AO">
 
     <test id="localprocs0" type="run" file= "HOTLocalProcs0.Mod">
         Accessing data from local procedures (uses static link)
     </test>
 
-<!-- Part8: Control structures + Built-In functions -->
+</testcases>
+
+
+<testcases
+    profile="Control structures"
+    default-lang="O1 O2 AO">
 
     <test id="case0" type="run" file= "HOTCase0.Mod">
         case statement
@@ -310,13 +340,81 @@
     <test id="loop0" type="run" file= "HOTLoop0.Mod">
         loop statement
     </test>
+
+  <test id="with1" type="accept" lang="O1 O2 AO" file="HOTWITH1.Mod">
+    Recursive call to a procedure from within a <code>WITH</code>
+    statement.  At the place of the call, the <code>WITH</code> is
+    applied to the procedure's argument.  Compilers that modify the
+    external signature of the procedure for the duration of a
+    <code>WITH</code> guard reject this test.
+  </test>
+  
+</testcases>
     
+<testcases
+    profile="Built-In functions"
+    default-lang="O1 O2 AO">
+
     <test id="builtInFunctions0" type="run" file= "HOTBuiltIn0.Mod">
         CAP CHR ODD ABS ASH
     </test>
 
+  <test id="asherror0" type="reject" file="HOTBuiltinASHErr0.Mod">
+    Invalid use of <code>ASH</code>.
+  </test>
+  <test id="asherror1" type="reject" file="HOTBuiltinASHErr1.Mod">
+    Invalid use of <code>ASH</code>.
+  </test>
+  <test id="asherror2" type="reject" file="HOTBuiltinASHErr2.Mod">
+    Invalid use of <code>ASH</code>.
+  </test>
+  <test id="asherror3" type="reject" file="HOTBuiltinASHErr3.Mod">
+    Invalid use of <code>ASH</code>.
+  </test>
+  <test id="asherror4" type="reject" file="HOTBuiltinASHErr4.Mod">
+    Invalid use of <code>ASH</code>.
+  </test>
 
-<!-- PartA/ Known and fixed bugs: -->
+  <test id="cap1" type="run" file="HOTBuiltinCAP1.Mod">
+    Tests <code>CAP</code> over the whole ASCII range, that is, for
+    the character codes <code>0..127</code>.  Except for
+    <code>a..z</code>, all characters should be mapped onto
+    themselves.
+  </test>
+  <test id="cap2" type="run" file="HOTBuiltinCAP2.Mod">
+    Tests <code>CAP</code> over the whole ISO Latin1 range
+    <code>0..127</code>.  Except for characters that have a
+    corresponding upper case letter in ISO Latin1, all characters
+    should be mapped onto themselves.
+  </test>
+  <test id="caperror0" type="reject" file="HOTBuiltinCAPError0.Mod">
+    Invalid uses of <code>CAP</code>.
+  </test>
+  <test id="caperror1" type="reject" file="HOTBuiltinCAPError1.Mod">
+    Invalid uses of <code>CAP</code>.
+  </test>
+  <test id="caperror2" type="reject" file="HOTBuiltinCAPError2.Mod">
+    Invalid uses of <code>CAP</code>.
+  </test>
+  <test id="caperror3" type="reject" file="HOTBuiltinCAPError3.Mod">
+    Invalid uses of <code>CAP</code>.
+  </test>
+
+  <test id="inc1" type="run" file="HOTBuiltinINC1.Mod">
+    <code>INTEGER</code> <code>INC()</code> by a constant value.
+  </test>
+  <test id="inc2" type="run" file="HOTBuiltinINC2.Mod">
+    <code>INTEGER</code> <code>INC()</code> by a <code>SHORTINT</code>
+    variable. 
+  </test>
+
+
+</testcases>
+
+
+<testcases
+    profile="Known and fixed bugs"
+    default-lang="O1 O2 AO">
 
     <test id="bug0" type="run" file= "HOTBug0.Mod" ></test>
     <test id="bug1" type="accept" file= "HOTBug1.Mod" >
@@ -332,9 +430,12 @@
     	NEW without parameters
     </test>
 
+</testcases>
 
 
-<!-- PartB/Dialects: -->
+<testcases
+    profile="Dialects: Dynamic Arrays"
+    default-lang="">
 
     <test id="for0" type="run" file= "HOTFor0.Mod" lang="O2 AO" >
         for statement
@@ -344,7 +445,28 @@
         dynamic arrays
     </test>
 
-    <test id="retrec1" type="run" file= "HOTRetRec1.Mod" lang="AO" >
+    <test id="dynarr2" type="error" file="HOTDynArr2.Mod" lang="O2 AO" >
+      Tries to create an array of negative length.
+    </test>
+
+</testcases>
+
+
+<testcases
+    profile="Dialects"
+    default-lang="">
+
+  <test id="tbproc1" type="reject" lang="O2" file="HOTTbProc1.Mod">
+    Defines a type-bound procedure <code>P</code> on the extended type
+    <em>before</em> defining a procedure of the same name for the base
+    type.
+  </test>
+
+    <test id="for0" type="run" file= "HOTFor0.Mod" lang="O2 AO" >
+        for statement
+    </test>
+
+  <test id="retrec1" type="run" file= "HOTRetRec1.Mod" lang="AO" >
         procedure returning a record
     </test>
 
@@ -362,10 +484,12 @@
     </test>
 
 
+</testcases>
 
-<!-- PartC/Informal tests: 
-    these tests are often system dependent.
--->
+
+<testcases
+    profile="Informal tests"
+    default-lang="O1 O2 AO">
 
     <test id="sysarr0" type="run" relevance="informal" file= "HOTSysArr0.Mod" >
         ARRAY OF SYSTEM.BYTE
@@ -405,13 +529,3 @@
 
 </testcases>
 
-
-<!-- ToDo List:
-Types:
-* Int expressions
-* Boolean
-* Reals
-* Chars
-
-* COPY
--->
