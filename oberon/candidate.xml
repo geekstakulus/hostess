@@ -46,4 +46,9 @@
      module all fields are visible.
   </test>
 
+  <!-- added 2001/05/17 prk -->
+  <test id="proc6" type="run" file= "HOTProc6.Mod" >
+     test "=" and "#" operators on procedure variables
+  </test>
+
 </testcases>
