@@ -91,9 +91,9 @@ PROCEDURE Test4*;
 VAR a: POINTER TO ARRAY OF CHAR;
 BEGIN
 	NEW(a, 32);
-	ASSERT(LEN(a) = 32);
-	NEW(a, LEN(a));
-	ASSERT(LEN(a) = 32);
+	ASSERT(LEN(a^) = 32);
+	NEW(a, LEN(a^));
+	ASSERT(LEN(a^) = 32);
 END Test4;
 
 PROCEDURE Test5*;
