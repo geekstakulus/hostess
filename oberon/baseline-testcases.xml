@@ -6,7 +6,7 @@ This list of testcases is a kind of calibration tool for the test
 framework.  All of the `baselinex' testcases should succeed, while all
 of the `baselineFx' testcases should fail.  If the test framework
 agrees with this, one can be reasonably sure that it neither produces
-false negatives, not false positives.
+false negatives, nor false positives.
 
 -->
 
