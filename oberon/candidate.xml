@@ -77,4 +77,19 @@
     The module name is not known within the module itself, and can be
     used by declarations.
   </test>
+
+  <!-- added 2001/08/30 mva -->
+  <test id="typetest0" type="error" file= "HOTTypeTest0.Mod">
+    Applies a type-test to <code>NIL</code>.
+  </test>
+  
+  <test id="typetest1" type="error" file= "HOTTypeTest1.Mod">
+    Applies a type-guard an rvalue of <code>NIL</code>.
+  </test>
+  
+  <test id="typetest2" type="error" file= "HOTTypeTest2.Mod">
+    Applies a type-guard an lvalue of <code>NIL</code>.  Note: I'm not
+    sure that applying a type guard to the target of an assignment
+    makes sense, but it is not illegal as far as I know.
+  </test>
 </testcases>
