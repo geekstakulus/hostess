@@ -39,5 +39,3 @@ BEGIN
 END Test;
 
 END HOTProc4A.
-
-HOTProc4A.Test

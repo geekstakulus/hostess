@@ -267,11 +267,3 @@ END Test;
 BEGIN
 	NEW(s3, 3); NEW(s4, 4);
 END HOTDelegates0.
-
-System.Free HOTDelegates0 ~
-
-HOTDelegates0.Test
-		HOTDelegates0.Test0	HOTDelegates0.Test1	HOTDelegates0.Test4
-
-
-Decoder.Decode HOTDelegates0 ~

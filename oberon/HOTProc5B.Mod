@@ -21,4 +21,3 @@ END Test;
 
 END HOTProc5B.
 
-HOTProc5B.Test

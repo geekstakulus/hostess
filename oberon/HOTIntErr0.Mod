@@ -6,4 +6,4 @@ BEGIN
 	i := l
 END P;
 
-END HOTIntErr0.Mod.
+END HOTIntErr0.

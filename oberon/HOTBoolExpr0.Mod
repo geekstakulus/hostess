@@ -58,9 +58,4 @@ BEGIN
 END Test;
 
 
-
-
 END HOTBoolExpr0.
-
-
-HOTBoolExpr0.Test
