@@ -90,4 +90,12 @@
     assignment of procedure values.
   </test>
 
+  <!-- added 2001/04/27 -->
+  <test id="tbproc2" type="reject" lang="O2" file="HOTTbProc2.Mod">
+    Defines a type-bound procedure <code>P</code> on a record type,
+    although an <em>extension</em> of this base type has already
+    defined a field of the same name.  This leads to a name clash for
+    the derived type.
+  </test>
+
 </testcases>
