@@ -1,0 +1,10 @@
+MODULE HOTIntErr1;	(** prk  **)
+
+PROCEDURE P;
+VAR s: SHORTINT;  l: LONGINT;
+BEGIN
+	s := l
+END P;
+
+
+END HOTIntErr1.

@@ -1,0 +1,10 @@
+MODULE HOTIntErr2;	(** prk  **)
+
+PROCEDURE P;
+VAR s: SHORTINT;  i: INTEGER;
+BEGIN
+	s := i
+END P;
+
+
+END HOTIntErr2.

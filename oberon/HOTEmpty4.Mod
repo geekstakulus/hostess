@@ -1,0 +1,11 @@
+MODULE HOTEmpty4;	(** prk  **)
+
+VAR
+	a: LONGINT;
+	
+PROCEDURE P;
+BEGIN
+END P;
+
+
+END HOTEmpty4.

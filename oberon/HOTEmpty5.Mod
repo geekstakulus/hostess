@@ -1,0 +1,7 @@
+MODULE HOTEmpty5;	(** prk  **)
+
+PROCEDURE P(x: LONGINT);
+VAR pa: LONGINT;
+BEGIN END P;
+
+END HOTEmpty5.

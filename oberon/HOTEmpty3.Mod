@@ -1,0 +1,7 @@
+MODULE HOTEmpty3;	(** prk  **)
+
+PROCEDURE P;
+BEGIN
+END P;
+
+END HOTEmpty3.

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<testcases
+    profile="Testcases for Oberon language consumers"
+    default-lang="O1">
+
+<!-- Part1: SIMPLE PARSER TESTS 
+    these tests are very simple, to allow developers implementing a new
+    compiler to test simple basic patterns. Only reject and accept tests here.
+-->
+
+    <test id="empty0" type="reject" file="HOTEmpty0.Mod">
+        Empty file
+    </test>
+    
+    <test id="empty1" type="accept" file="HOTEmpty1.Mod">
+        Empty module
+    </test>
+    
+    <test id="empty2" type="accept" file="HOTEmpty2.Mod">
+        Module with one global variable
+    </test>
+
+    <test id="empty3" type="accept" file="HOTEmpty3.Mod">
+        Module with one procedure
+    </test>
+    
+    <test id="empty4" type="accept" file="HOTEmpty4.Mod">
+        Module with one global variable and one procedure
+    </test>
+    
+    <test id="empty5" type="accept" file="HOTEmpty5.Mod">
+        Module with one procedure with simple parameters
+    </test>
+    
+    <test id="empty6" type="accept" file="HOTEmpty6.Mod">
+        Module declaring variables with integer, set, char types
+    </test>
+    
+    <test id="empty7" type="accept" file="HOTEmpty7.Mod">
+        Module declaring variables with boolean types
+    </test>
+
+    <test id="empty8" type="accept" file="HOTEmpty8.Mod">
+        Module declaring variables with real types
+    </test>
+
+    <test id="empty9" type="accept" file="HOTEmpty9.Mod">
+        Module declaring numeric (integer and char) constants
+    </test>
+
+    <test id="ident0" type="accept" file="HOTIdent0.Mod">
+        test legal identifiers
+    </test>
+
+    <test id="ident1" type="reject" file="HOTIdent1.Mod">
+        test illegal identifiers
+    </test>
+
+<!-- Part1: Built-in Type System 
+    these test check the build-in types and operators
+-->
+
+    <test id="int0" type="run" file="HOTInt0.Mod">
+        test integer constants, conversions, operators
+    </test>
+
+    <test id="interr0" type="reject" file="HOTIntErr0.Mod">
+        error LONGINT -> INTEGER
+    </test>
+
+    <test id="interr1" type="reject" file="HOTIntErr1.Mod">
+        error LONGINT -> SHORTINT
+    </test>
+
+    <test id="interr2" type="reject" file="HOTIntErr2.Mod">
+        error INTEGER -> SHORTINT
+    </test>
+
+</testcases>
