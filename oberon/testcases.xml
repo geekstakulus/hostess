@@ -216,35 +216,35 @@
     </test>
 
     <test id="recerr1" type="reject" file= "HOTRecErr1.Mod">
-        recursive type declaration
+        invalid type declaration
     </test>
 
     <test id="recerr2" type="reject" file= "HOTRecErr2.Mod">
-        recursive type declaration
+        invalid type declaration
     </test>
 
     <test id="recerr3" type="reject" file= "HOTRecErr3.Mod">
-        recursive type declaration
+        invalid type declaration
     </test>
 
     <test id="recerr4" type="reject" file= "HOTRecErr4.Mod">
-        recursive type declaration
+        invalid type declaration
     </test>
 
     <test id="recerr5" type="reject" file= "HOTRecErr5.Mod">
-        recursive type declaration
+        invalid type declaration
     </test>
 
     <test id="recerr6" type="reject" file= "HOTRecErr6.Mod">
-        recursive type declaration
+        invalid type declaration
     </test>
     
     <test id="recerr7" type="reject" file= "HOTRecErr7.Mod">
-        recursive type declaration
+        invalid type declaration
     </test>
 
     <test id="recerr8" type="reject" file= "HOTRecErr8.Mod">
-        recursive type declaration
+        invalid type declaration
     </test>
 
 </testcases>
