@@ -3,10 +3,13 @@
         <title>Oberon Testsuite</title>
     </head>
     <body bgcolor="white">
-        <h4>Testcases Profile: Testcases for Oberon language consumers</h4>
+        <h2>Oberon Testsuite</h2>
+        <p>
+            <b>Profile</b>: Hostess Test Suite</p>
+  
+
+<h4>Testcases Profile: SIMPLE PARSER TESTS</h4>
         <table width="100%" cellspacing="0" cellpadding="3" border="1">
-
-
 
     <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="baseline1"><strong>ID</strong>: baseline1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
@@ -299,9 +302,12 @@
     </p>
                 </td>
             </tr>
-    
-    
 
+</table>
+
+
+<h4>Testcases Profile: BUILT-IN TYPES</h4>
+        <table width="100%" cellspacing="0" cellpadding="3" border="1">
 
     <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="int0"><strong>ID</strong>: int0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
@@ -384,9 +390,10 @@
                 </td>
             </tr>
 
+</table>
 
-
-
+<h4>Testcases Profile: RECORDS</h4>
+        <table width="100%" cellspacing="0" cellpadding="3" border="1">
 
     <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="record0"><strong>ID</strong>: record0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
@@ -568,8 +575,12 @@
                 </td>
             </tr>
 
+</table>
 
 
+<h4>Testcases Profile: ARRAYS</h4>
+        <table width="100%" cellspacing="0" cellpadding="3" border="1">
+    
     <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="array0"><strong>ID</strong>: array0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
             </tr>
@@ -581,6 +592,16 @@
             </tr>
     
     <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="array2"><strong>ID</strong>: array2</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTArray2.Mod">Input</a>]<p>
+      Declares an array type of negative length.
+    </p>
+                </td>
+            </tr>
+
+    <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="string0"><strong>ID</strong>: string0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
             </tr>
             <tr>
@@ -590,8 +611,11 @@
                 </td>
             </tr>
 
+</table>
 
 
+<h4>Testcases Profile: PROCEDURE TYPES</h4>
+        <table width="100%" cellspacing="0" cellpadding="3" border="1">
 
     <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="proc0"><strong>ID</strong>: proc0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
@@ -683,7 +707,23 @@
                 </td>
             </tr>
 
+    <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="procvar1"><strong>ID</strong>: procvar1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>accept [<a href="HOTProcVar1.Mod">Input</a>]<p>
+      If this test passes, then the compiler applies the same relaxed
+      type rules to the comparison of procedure values as to the
+      assignment of procedure values.
+    </p>
+                </td>
+            </tr>
 
+</table>
+
+
+<h4>Testcases Profile: Accessing variables: import/export, local procedures</h4>
+        <table width="100%" cellspacing="0" cellpadding="3" border="1">
 
     <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="localprocs0"><strong>ID</strong>: localprocs0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
@@ -695,7 +735,11 @@
                 </td>
             </tr>
 
+</table>
 
+
+<h4>Testcases Profile: Control structures</h4>
+        <table width="100%" cellspacing="0" cellpadding="3" border="1">
 
     <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="case0"><strong>ID</strong>: case0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
@@ -716,7 +760,26 @@
     </p>
                 </td>
             </tr>
+
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="with1"><strong>ID</strong>: with1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>accept [<a href="HOTWITH1.Mod">Input</a>]<p>
+    Recursive call to a procedure from within a <code>WITH</code>
+    statement.  At the place of the call, the <code>WITH</code> is
+    applied to the procedure's argument.  Compilers that modify the
+    external signature of the procedure for the duration of a
+    <code>WITH</code> guard reject this test.
+  </p>
+                </td>
+            </tr>
+  
+</table>
     
+<h4>Testcases Profile: Built-In functions</h4>
+        <table width="100%" cellspacing="0" cellpadding="3" border="1">
+
     <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="builtInFunctions0"><strong>ID</strong>: builtInFunctions0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
             </tr>
@@ -727,8 +790,139 @@
                 </td>
             </tr>
 
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="asherror0"><strong>ID</strong>: asherror0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTBuiltinASHErr0.Mod">Input</a>]<p>
+    Invalid use of <code>ASH</code>.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="asherror1"><strong>ID</strong>: asherror1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTBuiltinASHErr1.Mod">Input</a>]<p>
+    Invalid use of <code>ASH</code>.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="asherror2"><strong>ID</strong>: asherror2</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTBuiltinASHErr2.Mod">Input</a>]<p>
+    Invalid use of <code>ASH</code>.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="asherror3"><strong>ID</strong>: asherror3</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTBuiltinASHErr3.Mod">Input</a>]<p>
+    Invalid use of <code>ASH</code>.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="asherror4"><strong>ID</strong>: asherror4</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTBuiltinASHErr4.Mod">Input</a>]<p>
+    Invalid use of <code>ASH</code>.
+  </p>
+                </td>
+            </tr>
+
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="cap1"><strong>ID</strong>: cap1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBuiltinCAP1.Mod">Input</a>]<p>
+    Tests <code>CAP</code> over the whole ASCII range, that is, for
+    the character codes <code>0..127</code>.  Except for
+    <code>a..z</code>, all characters should be mapped onto
+    themselves.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="cap2"><strong>ID</strong>: cap2</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBuiltinCAP2.Mod">Input</a>]<p>
+    Tests <code>CAP</code> over the whole ISO Latin1 range
+    <code>0..127</code>.  Except for characters that have a
+    corresponding upper case letter in ISO Latin1, all characters
+    should be mapped onto themselves.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="caperror0"><strong>ID</strong>: caperror0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTBuiltinCAPError0.Mod">Input</a>]<p>
+    Invalid uses of <code>CAP</code>.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="caperror1"><strong>ID</strong>: caperror1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTBuiltinCAPError1.Mod">Input</a>]<p>
+    Invalid uses of <code>CAP</code>.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="caperror2"><strong>ID</strong>: caperror2</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTBuiltinCAPError2.Mod">Input</a>]<p>
+    Invalid uses of <code>CAP</code>.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="caperror3"><strong>ID</strong>: caperror3</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTBuiltinCAPError3.Mod">Input</a>]<p>
+    Invalid uses of <code>CAP</code>.
+  </p>
+                </td>
+            </tr>
+
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="inc1"><strong>ID</strong>: inc1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBuiltinINC1.Mod">Input</a>]<p>
+    <code>INTEGER</code> <code>INC()</code> by a constant value.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="inc2"><strong>ID</strong>: inc2</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBuiltinINC2.Mod">Input</a>]<p>
+    <code>INTEGER</code> <code>INC()</code> by a <code>SHORTINT</code>
+    variable. 
+  </p>
+                </td>
+            </tr>
 
 
+</table>
+
+
+<h4>Testcases Profile: Known and fixed bugs</h4>
+        <table width="100%" cellspacing="0" cellpadding="3" border="1">
 
     <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="bug0"><strong>ID</strong>: bug0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
@@ -769,9 +963,11 @@
                 </td>
             </tr>
 
+</table>
 
 
-
+<h4>Testcases Profile: Dialects: Dynamic Arrays</h4>
+        <table width="100%" cellspacing="0" cellpadding="3" border="1">
 
     <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="for0"><strong>ID</strong>: for0</a></td><td><strong>Languages</strong>: O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
@@ -794,6 +990,44 @@
             </tr>
 
     <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="dynarr2"><strong>ID</strong>: dynarr2</a></td><td><strong>Languages</strong>: O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>error [<a href="HOTDynArr2.Mod">Input</a>]<p>
+      Tries to create an array of negative length.
+    </p>
+                </td>
+            </tr>
+
+</table>
+
+
+<h4>Testcases Profile: Dialects</h4>
+        <table width="100%" cellspacing="0" cellpadding="3" border="1">
+
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="tbproc1"><strong>ID</strong>: tbproc1</a></td><td><strong>Languages</strong>: O2</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTTbProc1.Mod">Input</a>]<p>
+    Defines a type-bound procedure <code>P</code> on the extended type
+    <em>before</em> defining a procedure of the same name for the base
+    type.
+  </p>
+                </td>
+            </tr>
+
+    <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="for1"><strong>ID</strong>: for1</a></td><td><strong>Languages</strong>: O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTFor0.Mod">Input</a>]<p>
+        for statement
+    </p>
+                </td>
+            </tr>
+
+  <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="retrec1"><strong>ID</strong>: retrec1</a></td><td><strong>Languages</strong>: AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
             </tr>
             <tr>
@@ -841,8 +1075,11 @@
             </tr>
 
 
+</table>
 
 
+<h4>Testcases Profile: Informal tests</h4>
+        <table width="100%" cellspacing="0" cellpadding="3" border="1">
 
     <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="sysarr0"><strong>ID</strong>: sysarr0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
@@ -962,5 +1199,7 @@
             </tr>
 
 </table>
-    </body>
+
+
+</body>
 </html>
