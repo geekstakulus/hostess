@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/TR/xhtml1/transitional">
+    <head>
+        <title>Oberon Testsuite</title>
+    </head>
+    <body bgcolor="white">
+        <h4>Testcases Profile: Candidate Testcases</h4>
+        <table width="100%" cellspacing="0" cellpadding="3" border="1">
+
+    <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="array1"><strong>ID</strong>: array1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTArray1.Mod">Input</a>]<p>
+      Declares an array type of length zero, and a variable of this type.
+    </p>
+                </td>
+            </tr>
+
+    <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="dynarr1"><strong>ID</strong>: dynarr1</a></td><td><strong>Languages</strong>: O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTDynArr1.Mod">Input</a>]<p>
+      Creates an array of length zero on the heap.
+    </p>
+                </td>
+            </tr>
+  
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="tbproc2"><strong>ID</strong>: tbproc2</a></td><td><strong>Languages</strong>: O2</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTTbProc2.Mod">Input</a>]<p>
+    Defines a type-bound procedure <code>P</code> on a record type,
+    although an <em>extension</em> of this base type has already
+    defined a field of the same name.  This leads to a name clash for
+    the derived type.
+  </p>
+                </td>
+            </tr>
+
+</table>
+    </body>
+</html>
