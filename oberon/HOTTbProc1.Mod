@@ -1,0 +1,10 @@
+MODULE HOTTbProc1;  (* mva *)
+
+TYPE
+  R0 = RECORD END;
+  R1 = RECORD (R0) END;
+
+PROCEDURE (VAR r: R1) P; END P;
+PROCEDURE (VAR r: R0) P; END P;
+
+END HOTTbProc1.
