@@ -40,4 +40,10 @@
      and procedure unified in one single type)
   </test>
 
+  <!-- added 2001/05/16 prk -->
+  <test id="recerr9" type="reject" file="HOTRecErr9.Mod.Mod" >
+     Field shadowing in a record extension not allowed, because in a
+     module all fields are visible.
+  </test>
+
 </testcases>
