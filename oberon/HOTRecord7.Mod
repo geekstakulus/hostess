@@ -90,7 +90,7 @@ VAR r: R1;
 BEGIN
 	NEW(r);
 	SetR1(r, 45, 54, 63);
-	ASSERT(r.e = 45, 1100);
+	ASSERT(r.e = 45, 110);
 	ASSERT(r.f = 54, 111);
 	ASSERT(r.g = 63, 112);
 	

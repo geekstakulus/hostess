@@ -18,10 +18,10 @@ PROCEDURE Test1*;
 BEGIN
 	SetX := SetX0;
 	SetX;
-	ASSERT(x = 0, 500);
+	ASSERT(x = 0, 200);
 	SetX := SetX1;
 	SetX;
-	ASSERT(x = 1, 501);
+	ASSERT(x = 1, 201);
 END Test1;
 
 PROCEDURE Test*;

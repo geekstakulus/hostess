@@ -42,7 +42,7 @@ PROCEDURE Test3*;
 	BEGIN
 		IF ~((i >= l0) & (i <= h0) OR (i >= l1) & (i <= h1)) THEN
 		ELSE
-			HALT(300)
+			HALT(200)
 		END
 	END CheckRange;
 
