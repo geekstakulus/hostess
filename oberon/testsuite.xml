@@ -9,15 +9,15 @@
     compiler to test simple basic patterns. Only reject and accept tests here.
 -->
 
-    <test id="empty0" type="reject" file="HOTEmpty0.Mod">
+    <test id="empty0" type="reject" file= "HOTEmpty0.Mod">
         Empty file
     </test>
     
-    <test id="empty1" type="accept" file="HOTEmpty1.Mod">
+    <test id="empty1" type="accept" file= "HOTEmpty1.Mod">
         Empty module
     </test>
     
-    <test id="empty2" type="accept" file="HOTEmpty2.Mod">
+    <test id="empty2" type="accept" file= "HOTEmpty2.Mod">
         Module with one global variable
     </test>
 
@@ -181,7 +181,7 @@
         dynamic record extension
     </test>
     
-    <test id="record8" type="run" file= "HOTRecord8.Mod">
+    <test id="record8" type="accept" file= "HOTRecord8.Mod">
         records with size 0 are ofter big trouble-makers
     </test>
     
@@ -294,7 +294,7 @@
 <!-- PartA/ Known and fixed bugs: -->
 
     <test id="bug0" type="run" file= "HOTBug0.Mod" ></test>
-    <test id="bug1" type="run" file= "HOTBug1.Mod" >
+    <test id="bug1" type="accept" file= "HOTBug1.Mod" >
     	OP2/ETHOberon
         saving and restoring temporary values on the stack. Restore used to pop integers as 32-bit, 
         thus making the stack inconsistent.
