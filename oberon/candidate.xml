@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<testcases profile="Candidate Testcases"
+	   default-lang="O1 O2 AO">
+
+    <test id="array1" type="run" relevance="informal" file="HOTArray1.Mod">
+      Declares an array type of length zero, and a variable of this type.
+    </test>
+
+    <test id="dynarr1" type="run" relevance="informal" file="HOTDynArr1.Mod" lang="O2 AO" >
+      Creates an array of length zero on the heap.
+    </test>
+  
+
+</testcases>
