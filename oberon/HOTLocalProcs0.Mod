@@ -69,7 +69,7 @@ END Test1;
 
 PROCEDURE Test5;
 TYPE
-	Rec = RECORD  x, y: LONGINT  END Rec;
+	Rec = RECORD  x, y: LONGINT  END;
 	
 	PROCEDURE Local(VAR x: Rec);
 	

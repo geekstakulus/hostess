@@ -4,7 +4,7 @@ TYPE
 	R0 = POINTER TO R0Desc;
 	R0Desc = RECORD
 		a, b, c: LONGINT
-	END R0Desc;
+	END;
 	
 VAR
 	g0: R0;
