@@ -1,0 +1,17 @@
+MODULE HOTIndExport0;	(** prk  **)
+
+TYPE
+	R0* = POINTER TO RECORD
+		x*: LONGINT;
+	END R0;
+
+	R1* = POINTER TO RECORD 
+		r0*: R0;
+	END R1;
+	
+PROCEDURE CheckIsR0*(x: PTR);
+BEGIN
+	ASSERT(x IS R0)
+END CheckIsR0;
+
+END HOTIndExport0.

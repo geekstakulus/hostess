@@ -19,4 +19,19 @@
     the derived type.
   </test>
 
+  <!-- added 2001/04/27 prk -->
+  <test id="varpar0" type="run" file= "HOTVarPar0.Mod">
+     Accessing global variables passed as var-parameters
+  </test>
+
+  <!-- added 2001/04/27 prk -->
+  <test id="indirectexport0" type="accept" file="HOTIndExport0.Mod" lang="AO">
+     Export a type indirectly through another type
+  </test>
+
+  <!-- added 2001/04/27 prk -->
+  <test id="indirectimport0" type="run" file="HOTIndImport0.Mod" lang="AO">
+     Import type exported indirectly (companion to indirectexport0)
+  </test>
+
 </testcases>
