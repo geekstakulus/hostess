@@ -1,0 +1,2 @@
+MODULE SYSTEM;  (* mva *)
+END SYSTEM.

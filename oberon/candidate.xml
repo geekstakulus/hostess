@@ -51,4 +51,30 @@
      test "=" and "#" operators on procedure variables
   </test>
 
+  <!-- added 2001/06/04 mva -->
+  <test id="export2" type="reject" relevance="informal" file= "HOTExport2.Mod">
+    Compile a module that calls itself <code>SYSTEM</code>.  The
+    compiler should probably reject this module, although it is also
+    sufficient if it never uses this module in the place of the
+    predefined <code>SYSTEM</code> module.
+  </test>
+  <test id="export3" type="accept" file= "HOTExport3.Mod">
+    The predefined module <code>SYSTEM</code> takes precedence over
+    any other module.  This test imports <code>SYSTEM</code> and
+    checks that it does not get the module from the previous test
+    case.
+  </test>
+  <test id="import1" type="reject" file= "HOTImport1.Mod">
+    Module imports itself.  No symbol file of the given name exists.
+  </test>
+  <test id="import2" type="accept" file= "HOTImport2.Mod">
+    Empty module, setting the stage for the next test.
+  </test>
+  <test id="import2a" type="reject" file= "HOTImport2.A.Mod">
+    Module imports itself.  A symbol file of the given name exists.
+  </test>
+  <test id="import3" type="accept" file= "HOTImport3.Mod">
+    The module name is not known within the module itself, and can be
+    used by declarations.
+  </test>
 </testcases>
