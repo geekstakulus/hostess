@@ -1,4 +1,4 @@
-MODULE HOTIntErr0.Mod;	(** prk  **)
+MODULE HOTIntErr0;	(** prk  **)
 
 PROCEDURE P;
 VAR i: INTEGER;  l: LONGINT;

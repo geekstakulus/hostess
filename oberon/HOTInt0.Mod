@@ -1,6 +1,6 @@
 MODULE HOTInt0;	(** prk  **)
 
-VAR
+CONST
 	a = 1;
 	b = 100;
 	c = 10000;
@@ -47,7 +47,7 @@ BEGIN
 	CheckS(c, 2); CheckS(c, a DIV b);
 	
 	c := a MOD b;
-	CheckS(c, 1); CheckS(c a, MOD b);
+	CheckS(c, 1); CheckS(c, a MOD b);
 END Test0;
 
 PROCEDURE Test1*;	(*INTEGER tests*)
@@ -74,7 +74,7 @@ BEGIN
 	CheckI(c, 2); CheckI(c, a DIV b);
 	
 	c := a MOD b;
-	CheckI(c, 1); CheckI(c a, MOD b);
+	CheckI(c, 1); CheckI(c, a MOD b);
 END Test1;
 
 PROCEDURE Test2*;	(*LONGINT tests*)
@@ -101,7 +101,7 @@ BEGIN
 	CheckL(c, 2); CheckL(c, a DIV b);
 	
 	c := a MOD b;
-	CheckL(c, 1); CheckL(c a, MOD b);
+	CheckL(c, 1); CheckL(c, a MOD b);
 END Test2;
 
 PROCEDURE Test3*;	(*conversions*)
@@ -113,7 +113,7 @@ BEGIN
 	CheckI(s, i);
 	CheckL(s, i);
 	
-	l := i
+	l := i;
 	CheckL(i, l);
 	l := s;
 	CheckL(s, l)

@@ -2,7 +2,7 @@
 
 <testcases
     profile="Testcases for Oberon language consumers"
-    default-lang="O1">
+    default-lang="O1 O2 AO">
 
 <!-- Part1: SIMPLE PARSER TESTS 
     these tests are very simple, to allow developers implementing a new
@@ -57,7 +57,7 @@
         test illegal identifiers
     </test>
 
-<!-- Part1: Built-in Type System 
+<!-- Part2: BUILT-IN TYPES 
     these test check the build-in types and operators
 -->
 

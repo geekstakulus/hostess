@@ -4,7 +4,7 @@ CONST
 	a = 1;
 	b = -2;
 	c = 1234H;
-	d = 0AFCDH
+	d = 0AFCDH;
 	e = 90X;
 	f = 0FFX;
 
