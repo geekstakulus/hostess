@@ -1,6 +1,6 @@
 MODULE HOTBuiltinASH1;  (* mva *)
 
-IMPORT Out := OakOut;
+IMPORT Out;
 
 PROCEDURE WriteSeq (start, dir, steps: LONGINT);
   VAR
@@ -33,6 +33,4 @@ PROCEDURE Test*;
     WriteSeq (-3, 0, 1);
   END Test;
 
-BEGIN
-  Out.Open
 END HOTBuiltinASH1.
