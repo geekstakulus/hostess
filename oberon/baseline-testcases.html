@@ -5,6 +5,8 @@
     <body bgcolor="white">
         <h4>Testcases Profile: Baseline Testcases for Test Framework</h4>
         <table width="100%" cellspacing="0" cellpadding="3" border="1">
+
+  
   <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="baseline1"><strong>ID</strong>: baseline1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
             </tr>
@@ -104,6 +106,203 @@
                 <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineOutput6.Mod">Input</a>] [<a href="HOTBaselineOutput6.Ref">Output Reference</a>]<p>
     Produces a single character as output.  No end-of-line character
     follows it.
+  </p>
+                </td>
+            </tr>
+  
+
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF1"><strong>ID</strong>: baselineF1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTBaselineAccept1.Mod">Input</a>]<p>
+    This testcase should <em>fail</em>.  Although the test's type is
+    `reject', the compiler should accept the module.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF2"><strong>ID</strong>: baselineF2</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>accept [<a href="HOTNoSuchModule.Mod">Input</a>]<p>
+    This testcase should <em>fail</em>.  Although the test's type is
+    `accept', no module of the given name exists.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF3"><strong>ID</strong>: baselineF3</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>accept [<a href="HOTBaselineReject1.Mod">Input</a>]<p>
+    This testcase should <em>fail</em>.  Although the test's type is
+    `accept', the module should not compile successfully.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF4"><strong>ID</strong>: baselineF4</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>error [<a href="HOTBaselineNoSuchModule.Mod">Input</a>]<p>
+    This testcase should <em>fail</em>.  Although the test's type is
+    `error', no module of the given name exists.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF5"><strong>ID</strong>: baselineF5</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>error [<a href="HOTBaselineReject1.Mod">Input</a>]<p>
+    This testcase should <em>fail</em>.  Although the test's type is
+    `error', the module does not compile successfully and therefore
+    cannot be executed.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF6"><strong>ID</strong>: baselineF6</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>error [<a href="HOTBaselineRun1.Mod">Input</a>]<p>
+    This testcase should <em>fail</em>.  Although the test's type is
+    `error', the module compiles and runs successfully.
+  </p>
+                </td>
+            </tr>
+
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF7"><strong>ID</strong>: baselineF7</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>error [<a href="HOTBaselineNameMismatch.Mod">Input</a>]<p>
+    This testcase should <em>fail</em>.  Although the test's type is
+    `error', the module file name does not match the module's name.
+    Therefore, the framework cannot call the exported procedure.
+  </p>
+                </td>
+            </tr>
+
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF8"><strong>ID</strong>: baselineF8</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>error [<a href="HOTBaselineNoTest.Mod">Input</a>]<p>
+    This testcase should <em>fail</em>.  Although the test's type is
+    `error', the module does not export a procedure <code>Test</code>.
+  </p>
+                </td>
+            </tr>
+
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF9"><strong>ID</strong>: baselineF9</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineNoSuchModule.Mod">Input</a>]<p>
+    This testcase should <em>fail</em>.  Although the test's type is
+    `run', no module of the given name exists.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF10"><strong>ID</strong>: baselineF10</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineReject1.Mod">Input</a>]<p>
+    This testcase should <em>fail</em>.  Although the test's type is
+    `run', the module does not compile successfully and therefore
+    cannot be executed.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF11"><strong>ID</strong>: baselineF11</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineError1.Mod">Input</a>]<p>
+    This testcase should <em>fail</em>.  Although the test's type is
+    `run', the module compiles successfully, but fails to execute
+    without error.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF12"><strong>ID</strong>: baselineF12</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineNameMismatch.Mod">Input</a>]<p>
+    This testcase should <em>fail</em>.  Although the test's type is
+    `run', the module file name does not match the module's name.
+    Therefore, the framework cannot call the exported procedure.
+  </p>
+                </td>
+            </tr>
+
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF13"><strong>ID</strong>: baselineF13</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineNoTest.Mod">Input</a>]<p>
+    This testcase should <em>fail</em>.  Although the test's type is
+    `run', the module does not export a procedure <code>Test</code>.
+  </p>
+                </td>
+            </tr>
+
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF14"><strong>ID</strong>: baselineF14</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineRun1.Mod">Input</a>] [<a href="HOTBaselineNoSuchModule.Ref">Output Reference</a>]<p>
+    This testcase should <em>fail</em>.  The test's type is
+    `run&amp;compare', but the given reference file does not exist.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF15"><strong>ID</strong>: baselineF15</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineOutput6.Mod">Input</a>] [<a href="HOTBaselineOutput6b.Ref">Output Reference</a>]<p>
+    This testcase should <em>fail</em>.  The test's type is
+    `run&amp;compare', but the given reference file does not match the
+    output.  Both output files are of the same length.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF16"><strong>ID</strong>: baselineF16</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineOutput5.Mod">Input</a>] [<a href="HOTBaselineOutput5b.Ref">Output Reference</a>]<p>
+    This testcase should <em>fail</em>.  The test's type is
+    `run&amp;compare', but the given reference file does not match the
+    output.  The reference file is shorter than the program output.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baselineF17"><strong>ID</strong>: baselineF17</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineOutput5.Mod">Input</a>] [<a href="HOTBaselineOutput5c.Ref">Output Reference</a>]<p>
+    This testcase should <em>fail</em>.  The test's type is
+    `run&amp;compare', but the given reference file does not match the
+    output.  The reference file is longer than the program output.
   </p>
                 </td>
             </tr>

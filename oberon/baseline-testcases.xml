@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
+<!--
+
+This list of testcases is a kind of calibration tool for the test
+framework.  All of the `baselinex' testcases should succeed, while all
+of the `baselineFx' testcases should fail.  If the test framework
+agrees with this, one can be reasonably sure that it neither produces
+false negatives, not false positives.
+
+-->
+
 <testcases profile="Baseline Testcases for Test Framework"
 	   default-lang="O1 O2 AO">
+
+  <!-- testcases for positive results: -->
   <test id="baseline1" type="reject" file="HOTBaselineReject1.Mod">
     Test file is <em>completely</em> empty.  The compiler should
     reject this invalid module.
@@ -54,6 +66,105 @@
 	output="HOTBaselineOutput6.Ref">
     Produces a single character as output.  No end-of-line character
     follows it.
+  </test>
+  
+
+  <!-- testcases for negative results: -->
+  <test id="baselineF1" type="reject" file="HOTBaselineAccept1.Mod">
+    This testcase should <em>fail</em>.  Although the test's type is
+    `reject', the compiler should accept the module.
+  </test>
+  
+  <test id="baselineF2" type="accept" file="HOTNoSuchModule.Mod">
+    This testcase should <em>fail</em>.  Although the test's type is
+    `accept', no module of the given name exists.
+  </test>
+  
+  <test id="baselineF3" type="accept" file="HOTBaselineReject1.Mod">
+    This testcase should <em>fail</em>.  Although the test's type is
+    `accept', the module should not compile successfully.
+  </test>
+  
+  <test id="baselineF4" type="error" file="HOTBaselineNoSuchModule.Mod">
+    This testcase should <em>fail</em>.  Although the test's type is
+    `error', no module of the given name exists.
+  </test>
+  
+  <test id="baselineF5" type="error" file="HOTBaselineReject1.Mod">
+    This testcase should <em>fail</em>.  Although the test's type is
+    `error', the module does not compile successfully and therefore
+    cannot be executed.
+  </test>
+  
+  <test id="baselineF6" type="error" file="HOTBaselineRun1.Mod">
+    This testcase should <em>fail</em>.  Although the test's type is
+    `error', the module compiles and runs successfully.
+  </test>
+
+  <test id="baselineF7" type="error" file="HOTBaselineNameMismatch.Mod">
+    This testcase should <em>fail</em>.  Although the test's type is
+    `error', the module file name does not match the module's name.
+    Therefore, the framework cannot call the exported procedure.
+  </test>
+
+  <test id="baselineF8" type="error" file="HOTBaselineNoTest.Mod">
+    This testcase should <em>fail</em>.  Although the test's type is
+    `error', the module does not export a procedure <code>Test</code>.
+  </test>
+
+  <test id="baselineF9" type="run" file="HOTBaselineNoSuchModule.Mod">
+    This testcase should <em>fail</em>.  Although the test's type is
+    `run', no module of the given name exists.
+  </test>
+  
+  <test id="baselineF10" type="run" file="HOTBaselineReject1.Mod">
+    This testcase should <em>fail</em>.  Although the test's type is
+    `run', the module does not compile successfully and therefore
+    cannot be executed.
+  </test>
+  
+  <test id="baselineF11" type="run" file="HOTBaselineError1.Mod">
+    This testcase should <em>fail</em>.  Although the test's type is
+    `run', the module compiles successfully, but fails to execute
+    without error.
+  </test>
+  
+  <test id="baselineF12" type="run" file="HOTBaselineNameMismatch.Mod">
+    This testcase should <em>fail</em>.  Although the test's type is
+    `run', the module file name does not match the module's name.
+    Therefore, the framework cannot call the exported procedure.
+  </test>
+
+  <test id="baselineF13" type="run" file="HOTBaselineNoTest.Mod">
+    This testcase should <em>fail</em>.  Although the test's type is
+    `run', the module does not export a procedure <code>Test</code>.
+  </test>
+
+  <test id="baselineF14" type="run" file="HOTBaselineRun1.Mod"
+	output="HOTBaselineNoSuchModule.Ref">
+    This testcase should <em>fail</em>.  The test's type is
+    `run&amp;compare', but the given reference file does not exist.
+  </test>
+  
+  <test id="baselineF15" type="run" file="HOTBaselineOutput6.Mod"
+	output="HOTBaselineOutput6b.Ref">
+    This testcase should <em>fail</em>.  The test's type is
+    `run&amp;compare', but the given reference file does not match the
+    output.  Both output files are of the same length.
+  </test>
+  
+  <test id="baselineF16" type="run" file="HOTBaselineOutput5.Mod"
+	output="HOTBaselineOutput5b.Ref">
+    This testcase should <em>fail</em>.  The test's type is
+    `run&amp;compare', but the given reference file does not match the
+    output.  The reference file is shorter than the program output.
+  </test>
+  
+  <test id="baselineF17" type="run" file="HOTBaselineOutput5.Mod"
+	output="HOTBaselineOutput5c.Ref">
+    This testcase should <em>fail</em>.  The test's type is
+    `run&amp;compare', but the given reference file does not match the
+    output.  The reference file is longer than the program output.
   </test>
   
 </testcases>
