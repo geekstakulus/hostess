@@ -48,6 +48,10 @@
     <test id="empty9" type="accept" file="HOTEmpty9.Mod">
         Module declaring numeric (integer and char) constants
     </test>
+    
+    <test id="empty10" type="reject" file= "HOTEmpty10.Mod">
+        file with garbage
+    </test>
 
     <test id="ident0" type="accept" file="HOTIdent0.Mod">
         test legal identifiers
@@ -56,12 +60,59 @@
     <test id="ident1" type="reject" file="HOTIdent1.Mod">
         test illegal identifiers
     </test>
+    
+    <test id="dupl0" type="reject" file= "HOTDupl0.Mod">
+        duplicate identifiers
+    </test>
+    
+    <test id="dupl1" type="reject" file= "HOTDupl1.Mod">
+        duplicate identifiers
+    </test>
 
-<!-- Part2: BUILT-IN TYPES 
-    these test check the build-in types and operators
+    <test id="dupl2" type="reject" file= "HOTDupl2.Mod">
+        duplicate identifiers
+    </test>
+
+    <test id="dupl3" type="reject" file= "HOTDupl3.Mod">
+        duplicate identifiers
+    </test>
+
+
+<!-- Part2: BASIC CHECKS FOR THE NEXT PARTS
+    make sure that run and error work. Check basic Import/Export
 -->
 
-    <test id="int0" type="run" file="HOTInt0.Mod">
+    <test id="run" type="run" file="HOTRun.Mod">
+        run an empty program
+    </test>
+
+    <test id="error" type="error" file="HOTError.Mod">
+        run an empty program
+    </test>
+
+    <test id="export0" type="accept" file= "HOTExport0.Mod">
+        export some variables
+    </test>
+
+    <test id="export1" type="run" file= "HOTExport1.Mod">
+        import variables from export0
+    </test>
+
+    <test id="duplicate import" type="reject" file= "HOTDoubleImport.Mod" >
+        duplicate import
+    </test>
+    
+    <test id="duplicate import 1" type="reject" file= "HOTDoubleImport1.Mod" >
+        duplicate import
+    </test>
+
+    <test id="failed import" type="reject" file= "HOTFailedImport.Mod" >
+         failed import
+    </test>
+
+<!-- Part3: BUILT-IN TYPES -->
+
+    <test id="int0" type="run" file= "HOTInt0.Mod">
         test integer constants, conversions, operators
     </test>
 
@@ -77,4 +128,265 @@
         error INTEGER -> SHORTINT
     </test>
 
+    <test id="intpatterns0" type="run" file= "HOTIntPatterns0.Mod">
+        usign integers. Some cases where strenght reduction could be used
+        (but must be checked by hand)
+    </test>
+
+    <test id="intoldbugs" type="run" file= "HOTIntOldBugs.Mod">
+        Old compiler bugs with integers. Make sure they are gone forever.
+    </test>
+
+    <test id="boolexpr0" type="reject" file= "HOTBoolExpr0.Mod">
+        Boolean Expressions
+    </test>
+
+    <test id="reals0" type="run" file= "HOTReals0.Mod">
+        reals
+    </test>
+
+
+
+<!-- Part4: RECORDS  -->
+
+    <test id="record0" type="accept" file= "HOTRecord0.Mod">
+        empty record declaration
+    </test>
+
+    <test id="record1" type="accept" file= "HOTRecord1.Mod">
+        simple record declaration
+    </test>
+
+    <test id="record2" type="accept" file= "HOTRecord2.Mod">
+        simple pointer to named record declaration
+    </test>
+
+    <test id="record3" type="accept" file= "HOTRecord3.Mod">
+        using record fields
+    </test>
+
+    <test id="record4" type="run" file= "HOTRecord4.Mod">
+        record access and copy
+    </test>
+
+    <test id="record5" type="run" file= "HOTRecord5.Mod">
+        static record extension
+    </test>
+
+    <test id="record6" type="run" file= "HOTRecord6.Mod">
+        dynamic record access
+    </test>
+
+    <test id="record7" type="run" file= "HOTRecord7.Mod">
+        dynamic record extension
+    </test>
+    
+    <test id="record8" type="run" file= "HOTRecord8.Mod">
+        records with size 0 are ofter big trouble-makers
+    </test>
+    
+    <test id="recerr0" type="reject" file= "HOTRecErr0.Mod">
+        name equivalence, not structure equivalence
+    </test>
+
+    <test id="recerr1" type="reject" file= "HOTRecErr1.Mod">
+        recursive type declaration
+    </test>
+
+    <test id="recerr2" type="reject" file= "HOTRecErr2.Mod">
+        recursive type declaration
+    </test>
+
+    <test id="recerr3" type="reject" file= "HOTRecErr3.Mod">
+        recursive type declaration
+    </test>
+
+    <test id="recerr4" type="reject" file= "HOTRecErr4.Mod">
+        recursive type declaration
+    </test>
+
+    <test id="recerr5" type="reject" file= "HOTRecErr5.Mod">
+        recursive type declaration
+    </test>
+
+    <test id="recerr6" type="reject" file= "HOTRecErr6.Mod">
+        recursive type declaration
+    </test>
+    
+    <test id="recerr7" type="reject" file= "HOTRecErr7.Mod">
+        recursive type declaration
+    </test>
+
+    <test id="recerr8" type="reject" file= "HOTRecErr8.Mod">
+        recursive type declaration
+    </test>
+
+
+<!-- Part5: ARRAYS -->
+    <test id="array0" type="run" file= "HOTArray0.Mod">
+        single dimensional array festival
+    </test>
+    
+    <test id="string0" type="run" file= "HOTString0.Mod">
+        string tests
+    </test>
+
+
+<!-- Part6: PROCEDURE TYPES -->
+
+    <test id="proc0" type="accept" file= "HOTProc0.Mod">
+        procedure variables: declaration, assignment, parameter passing
+    </test>
+
+    <test id="proc1" type="run" file= "HOTProc1.Mod">
+        procedure variable test
+    </test>
+
+    <test id="proc2" type="run" file= "HOTProc2.Mod">
+        procedure variable test
+    </test>
+
+    <test id="proc3" type="run" file= "HOTProc3.Mod">
+        proc type returning a proc type, array of procedures
+    </test>
+
+    <test id="proc4" type="run" file= "HOTProc4.Mod">
+        exporting proc types
+    </test>
+
+    <test id="proc4a" type="run" file= "HOTProc4A.Mod">
+        importing proc types
+    </test>
+
+    <test id="proc5" type="run" file= "HOTProc5.Mod">
+        exporting proc types
+    </test>
+
+    <test id="proc5a" type="run" file= "HOTProc5A.Mod">
+        importing/reexporting proc types
+    </test>
+
+    <test id="proc5b" type="run" file= "HOTProc5B.Mod">
+        importing proc types
+    </test>
+
+<!-- Part7: Accessing variables: import/export, local procedures -->
+
+    <test id="localprocs0" type="run" file= "HOTLocalProcs0.Mod">
+        Accessing data from local procedures (uses static link)
+    </test>
+
+<!-- Part8: Control structures + Built-In functions -->
+
+    <test id="case0" type="run" file= "HOTCase0.Mod">
+        case statement
+    </test>
+
+    <test id="loop0" type="run" file= "HOTLoop0.Mod">
+        loop statement
+    </test>
+    
+    <test id="built-in functions 0" type="run" file= "HOTBuiltIn0.Mod">
+        CAP CHR ODD ABS ASH
+    </test>
+
+
+<!-- PartA/ Known and fixed bugs: -->
+
+    <test id="bug0" type="run" file= "HOTBug0.Mod" ></test>
+    <test id="bug1" type="run" file= "HOTBug1.Mod" >
+    	OP2/ETHOberon
+        saving and restoring temporary values on the stack. Restore used to pop integers as 32-bit, 
+        thus making the stack inconsistent.
+    </test>
+    <test id="bug2" type="run" file= "HOTBug2.Mod" >
+    	OP2/ETHOberon
+    	Integers on the stack... troubles ahead
+    </test>
+    <test id="bug3" type="reject" file= "HOTBug3.Mod" >
+    	NEW without parameters
+    </test>
+
+
+
+<!-- PartB/Dialects: -->
+
+    <test id="for0" type="run" file= "HOTFor0.Mod" lang="O2 AO" >
+        for statement
+    </test>
+
+    <test id="dynarr0" type="run" file= "HOTDynArr0.Mod" lang="O2 AO" >
+        dynamic arrays
+    </test>
+
+    <test id="retrec1" type="run" file= "HOTRetRec1.Mod" lang="AO" >
+        procedure returning a record
+    </test>
+
+    <test id="ao method error 0" type="reject" file= "HOTMethodError0.Mod" lang="AO" >
+        method overriding with different signature
+    </test>
+    <test id="ao method error 1" type="reject" file= "HOTMethodError1.Mod" lang="AO" >
+        method overriding with different signature
+    </test>
+    <test id="ao method error 2" type="reject" file= "HOTMethodError2.Mod" lang="AO" >
+        method overriding with different signature
+    </test>
+    <test id="ao method error 3" type="reject" file= "HOTMethodError3.Mod" lang="AO" >
+        method overriding with different signature
+    </test>
+
+
+
+<!-- PartC/Informal tests: 
+    these tests are often system dependent.
+-->
+
+    <test id="sysarr0" type="run" relevance="informal" file= "HOTSysArr0.Mod" >
+        ARRAY OF SYSTEM.BYTE
+    </test>
+    
+    <test id="special cast 0" type="reject" relevance="informal" file= "HOTSpecialCast0.Mod" >
+        cast PTR to POINTER TO ARRAY 5 OF CHAR
+        a dynamic array has no type descriptor, this is not possible
+    </test>
+    
+    <!--
+        export can get be tricky when using hidden or anonymous structures. Type aliasing and reexport
+        make the problem even worse.
+    -->
+    <test id="specialexport0" type="accept" relevance="informal" file= "HOTSpecialExport0.Mod" ></test>
+    <test id="specialexport0a" type="accept" relevance="informal" file= "HOTSpecialExport0A.Mod" ></test>
+    <test id="specialexport0b" type="run" relevance="informal" file= "HOTSpecialExport0B.Mod" ></test>
+
+    <!--
+        'nightmare' bug in OP2 for ETH Oberon. Exporting a type that was previously exported as record
+        created ghost structures and made the compiler crash
+    -->
+    <test id="specialexport1, export " type="accept" relevance="informal" file= "HOTSpecialExport1.Mod" ></test>
+    <test id="specialexport1, import " type="accept" relevance="informal" file= "HOTSpecialExport2.Mod" ></test>
+    <test id="specialexport1, export A" type="accept" relevance="informal" file= "HOTSpecialExport1.A.Mod" ></test>
+    <test id="specialexport1, import A" type="accept" relevance="informal" file= "HOTSpecialExport2.A.Mod" ></test>
+    <test id="specialexport1, export B" type="accept" relevance="informal" file= "HOTSpecialExport1.B.Mod" ></test>
+    <test id="specialexport1, import B" type="fail" relevance="informal" file= "HOTSpecialExport2.B.Mod" ></test>
+
+    <test id="sys builtin 0" type="run" relevance="informal" file= "HOTSysBuiltIn0.Mod" >
+    </test>
+
+    <test id="duplicate fingerprint" type="run" relevance="informal" file= "HOTDuplFP.Mod" >
+        OP2/ ETH Oberon
+        this module generates duplicate fingerprints 
+    </test>
+
 </testcases>
+
+
+<!-- ToDo List:
+Types:
+* Int expressions
+* Boolean
+* Reals
+* Chars
+
+* COPY
+-->
