@@ -289,6 +289,10 @@
         proc type returning a proc type, array of procedures
     </test>
 
+    <test id="proc3FOR" type="run" file= "HOTProc3FOR.Mod" lang="O2 AO">
+        proc type returning a proc type, array of procedures (version with FOR)
+    </test>
+
     <test id="proc4" type="run" file= "HOTProc4.Mod">
         exporting proc types
     </test>
@@ -357,6 +361,10 @@
 
     <test id="builtInFunctions0" type="run" file= "HOTBuiltIn0.Mod">
         CAP CHR ODD ABS ASH
+    </test>
+
+    <test id="builtInFunctions0FOR" type="run" file= "HOTBuiltIn0FOR.Mod" lang="O2 AO">
+        CAP CHR ODD ABS ASH (FOR version)
     </test>
 
   <test id="asherror0" type="reject" file="HOTBuiltinASHErr0.Mod">
@@ -487,11 +495,25 @@
     profile="Informal tests"
     default-lang="O1 O2 AO">
 
+    <test id="const1" type="run" relevance="informal" file="HOTConst1.Mod" >
+        Test constant folding.
+        Informal, because typing of constants is not clearly defined in report
+    </test>
+
+    <test id="const2" type="run" relevance="informal" file="HOTConst2.Mod" >
+        Test constant folding.
+        Informal, because typing of constants is not clearly defined in report
+    </test>
+
     <test id="sysarr0" type="run" relevance="informal" file= "HOTSysArr0.Mod" >
         ARRAY OF SYSTEM.BYTE
     </test>
     
-    <test id="specialCast0" type="reject" relevance="informal" file= "HOTSpecialCast0.Mod" >
+    <test id="sysarr0FOR" type="run" relevance="informal" file= "HOTSysArr0FOR.Mod" lang="O2 AO">
+        ARRAY OF SYSTEM.BYTE (FOR version)
+    </test>
+    
+    <test id="specialCast0" type="reject" relevance="informal" file= "HOTSpecialCast0.Mod" lang="O2 AO" >
         cast PTR to POINTER TO ARRAY 5 OF CHAR
         a dynamic array has no type descriptor, this is not possible
     </test>
@@ -518,7 +540,11 @@
     <test id="sysBuiltin0" type="run" relevance="informal" file= "HOTSysBuiltIn0.Mod" >
     </test>
 
-    <test id="duplicateFingerprint" type="accept" relevance="informal" file= "HOTDuplFP.Mod" >
+    <test id="sysBuiltin0FOR" type="run" relevance="informal" file= "HOTSysBuiltIn0FOR.Mod" >
+        (FOR version)
+    </test>
+
+    <test id="duplicateFingerprint" type="accept" relevance="informal" file= "HOTDuplFP.Mod" lang="O2 AO" >
         OP2/ ETH Oberon
         this module generates duplicate fingerprints 
     </test>
