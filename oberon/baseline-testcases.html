@@ -1,0 +1,113 @@
+<html xmlns="http://www.w3.org/TR/xhtml1/transitional">
+    <head>
+        <title>Oberon Testsuite</title>
+    </head>
+    <body bgcolor="white">
+        <h4>Testcases Profile: Baseline Testcases for Test Framework</h4>
+        <table width="100%" cellspacing="0" cellpadding="3" border="1">
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baseline1"><strong>ID</strong>: baseline1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTBaselineReject1.Mod">Input</a>]<p>
+    Test file is <em>completely</em> empty.  The compiler should
+    reject this invalid module.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baseline2"><strong>ID</strong>: baseline2</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>accept [<a href="HOTBaselineAccept1.Mod">Input</a>]<p>
+    Test case is an empty <code>MODULE</code>; such a module is
+    useless, but technically legal.  The compiler should accept it.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baseline3"><strong>ID</strong>: baseline3</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>error [<a href="HOTBaselineError1.Mod">Input</a>]<p>
+    Module body has a single statement: <code>ASSERT(FALSE)</code>.
+    The module should compile, and it should be possible to execute
+    the exported procedure, but evaluation should raise an exception.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baseline4"><strong>ID</strong>: baseline4</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineRun1.Mod">Input</a>]<p>
+    Module with a single, empty, procedure <code>Test</code>.  The
+    module should compile and evaluate fine, but does not do anything
+    at all.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baseline5"><strong>ID</strong>: baseline5</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineOutput0.Mod">Input</a>] [<a href="HOTBaselineOutput0.Ref">Output Reference</a>]<p>
+    Module produces no output, and <code>HOTBaselineOutput0.Ref</code>
+    is empty.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baseline6"><strong>ID</strong>: baseline6</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineOutput1.Mod">Input</a>] [<a href="HOTBaselineOutput1.Ref">Output Reference</a>]<p>
+    Evaluation of the procedure <code>Test</code> prints the famous
+    <code>Hello World!</code>, followed by a single newline character.
+    Command execution should succeed, and the command's output should
+    match the content of file <code>HOTBaselineOutput1.Ref</code>
+    (with the exception of a possibly different newline character).
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baseline8"><strong>ID</strong>: baseline8</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineOutput3.Mod">Input</a>] [<a href="HOTBaselineOutput3.Ref">Output Reference</a>]<p>
+    Tests integer output for <code>LONGINT</code>:
+    padding, sign, alignment.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baseline10"><strong>ID</strong>: baseline10</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineOutput5.Mod">Input</a>] [<a href="HOTBaselineOutput5.Ref">Output Reference</a>]<p>
+    Tests character output.  Not much to test, though.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="baseline11"><strong>ID</strong>: baseline11</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBaselineOutput6.Mod">Input</a>] [<a href="HOTBaselineOutput6.Ref">Output Reference</a>]<p>
+    Produces a single character as output.  No end-of-line character
+    follows it.
+  </p>
+                </td>
+            </tr>
+  
+</table>
+    </body>
+</html>
