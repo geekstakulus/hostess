@@ -34,4 +34,10 @@
      Import type exported indirectly (companion to indirectexport0)
   </test>
 
+  <!-- added 2001/05/09 prk -->
+  <test id="delegates0" type="run" file="HOTDelegates0.Mod" lang="AO">
+     Test the implementation of the Active Oberon Delegates (method
+     and procedure unified in one single type)
+  </test>
+
 </testcases>
