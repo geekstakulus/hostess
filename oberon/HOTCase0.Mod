@@ -4,7 +4,8 @@ MODULE HOTCase0;	(** prk  **)
 PROCEDURE Test0*;
 VAR i, val: LONGINT;
 BEGIN
-	FOR i := 0 TO 10 DO
+	i := 0;
+	WHILE i <= 10 DO
 		CASE i OF
 		| 0:	val := 10
 		| 2:	val := 8
@@ -17,9 +18,8 @@ BEGIN
 		END;
 		
 		ASSERT((ODD(i) & (val = i)) OR (~ODD(i) & (val = (10-i))));
-
+		INC(i)
 	END
-	
 END Test0;
 
 PROCEDURE Test*;
