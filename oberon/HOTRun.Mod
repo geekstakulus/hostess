@@ -1,7 +1,0 @@
-MODULE HOTRun;	(** prk  **)
-
-PROCEDURE Test*;
-BEGIN
-END Test;
-
-END HOTRun.
