@@ -95,18 +95,24 @@ END Test3;
 PROCEDURE Test4*;
 VAR i, j: LONGINT;
 BEGIN
-	FOR i := 0 TO 2 DO
-		FOR j := 1 TO 3 DO
-			Check(ga[i](j), j, (i+1)*(j+1)-1)
-		END
+	i := 0;
+	WHILE i <= 2 DO
+		j := 1;
+		WHILE j <= 3 DO
+			Check(ga[i](j), j, (i+1)*(j+1)-1);
+			INC(j)
+		END;
+		INC(i)
 	END
 END Test4;
 
 PROCEDURE Test5;
 VAR i: LONGINT;
 BEGIN
-	FOR i := 0 TO 3*3 -1 DO
-		Check(ga[i DIV 3](1 + i MOD 3), 1 + i MOD 3, i)
+	i := 0;
+	WHILE i < (3*3 - 1) DO
+		Check(ga[i DIV 3](1 + i MOD 3), 1 + i MOD 3, i);
+		INC(i)
 	END
 END Test5;
 

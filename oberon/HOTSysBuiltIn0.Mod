@@ -108,10 +108,13 @@ BEGIN
 	ASSERT(pix[2] = 10X, 152);
 	ASSERT(pix[3] = 12X, 153);
 	
-	FOR x := 0 TO 35 DO  meg2[x] := CHR(x)  END;
+	x := 0;
+	WHILE x <= 35 DO  meg2[x] := CHR(x); INC(x)  END;
 	meg := meg2;
-	FOR x := 0 TO 35 DO
-		ASSERT(meg[x] = meg2[x], 154)
+	x := 0;
+	WHILE x <= 35 DO
+		ASSERT(meg[x] = meg2[x], 154);
+		INC(x)
 	END
 END Test1;
 

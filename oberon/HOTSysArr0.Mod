@@ -19,10 +19,12 @@ END Check2;
 PROCEDURE Test1*;
 VAR  a: ARRAY 16 OF CHAR;  i: LONGINT;
 BEGIN
-	FOR i := 0 TO 15 DO
+	i := 0;
+	WHILE i <= 15 DO
 		a[i] := CHR(i*3);
 		Check1(a, i, i*3);
-		Check2(a, i, i*3)
+		Check2(a, i, i*3);
+		INC(i)
 	END
 END Test1;
 
@@ -32,16 +34,20 @@ VAR  a: ARRAY 16 OF CHAR;  i: LONGINT;
 	PROCEDURE Check1(x: ARRAY OF SYSTEM.BYTE);
 	VAR i: LONGINT;
 	BEGIN
-		FOR i := 0 TO 15 DO
-			ASSERT(SYSTEM.VAL(CHAR, x[i]) = CHR(i*5), 100)
+		i := 0;
+		WHILE i <= 15 DO
+			ASSERT(SYSTEM.VAL(CHAR, x[i]) = CHR(i*5), 100);
+			INC(i)
 		END
 	END Check1;
 
 	PROCEDURE Check1V(x: ARRAY OF SYSTEM.BYTE);
 	VAR i: LONGINT;
 	BEGIN
-		FOR i := 0 TO 15 DO
-			ASSERT(SYSTEM.VAL(CHAR, x[i]) = CHR(i*5), 100)
+		i := 0;
+		WHILE i <= 15 DO
+			ASSERT(SYSTEM.VAL(CHAR, x[i]) = CHR(i*5), 100);
+			INC(i)
 		END
 	END Check1V;
 	
@@ -56,7 +62,8 @@ VAR  a: ARRAY 16 OF CHAR;  i: LONGINT;
 	END Check2V;
 
 BEGIN
-	FOR i := 0 TO 15 DO  a[i] := CHR(i*5)  END;
+	i := 0;
+	WHILE i <= 15 DO a[i] := CHR(i*5); INC(i) END;
 	Check1(a); Check1V(a);
 	Check2(a); Check2V(a);
 END Test2;

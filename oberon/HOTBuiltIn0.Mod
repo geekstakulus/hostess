@@ -4,8 +4,10 @@ PROCEDURE TestCAPCHR*;
 VAR  i: LONGINT;
 BEGIN
 	ASSERT( CAP("a") = "A" );
-	FOR i := ORD("a") TO ORD("z")  DO
-		ASSERT( CAP( CHR(i) ) = CHR( i - ORD("a") + ORD("A") ) )
+	i := ORD("a");
+	WHILE i <= ORD("z") DO
+		ASSERT( CAP( CHR(i) ) = CHR( i - ORD("a") + ORD("A") ) );
+		INC(i)
 	END
 END TestCAPCHR;
 
