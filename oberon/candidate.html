@@ -85,6 +85,149 @@
                 </td>
             </tr>
 
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="recerr9"><strong>ID</strong>: recerr9</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTRecErr9.Mod.Mod">Input</a>]<p>
+     Field shadowing in a record extension not allowed, because in a
+     module all fields are visible.
+  </p>
+                </td>
+            </tr>
+
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="proc6"><strong>ID</strong>: proc6</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTProc6.Mod">Input</a>]<p>
+     test "=" and "#" operators on procedure variables
+  </p>
+                </td>
+            </tr>
+
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="export2"><strong>ID</strong>: export2</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTExport2.Mod">Input</a>]<p>
+    Compile a module that calls itself <code>SYSTEM</code>.  The
+    compiler should probably reject this module, although it is also
+    sufficient if it never uses this module in the place of the
+    predefined <code>SYSTEM</code> module.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="export3"><strong>ID</strong>: export3</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>accept [<a href="HOTExport3.Mod">Input</a>]<p>
+    The predefined module <code>SYSTEM</code> takes precedence over
+    any other module.  This test imports <code>SYSTEM</code> and
+    checks that it does not get the module from the previous test
+    case.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="import1"><strong>ID</strong>: import1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTImport1.Mod">Input</a>]<p>
+    Module imports itself.  No symbol file of the given name exists.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="import2"><strong>ID</strong>: import2</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>accept [<a href="HOTImport2.Mod">Input</a>]<p>
+    Empty module, setting the stage for the next test.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="import2a"><strong>ID</strong>: import2a</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>reject [<a href="HOTImport2.A.Mod">Input</a>]<p>
+    Module imports itself.  A symbol file of the given name exists.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="import3"><strong>ID</strong>: import3</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>accept [<a href="HOTImport3.Mod">Input</a>]<p>
+    The module name is not known within the module itself, and can be
+    used by declarations.
+  </p>
+                </td>
+            </tr>
+
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="typetest0"><strong>ID</strong>: typetest0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>error [<a href="HOTTypeTest0.Mod">Input</a>]<p>
+    Applies a type-test to <code>NIL</code>.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="typetest1"><strong>ID</strong>: typetest1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>error [<a href="HOTTypeTest1.Mod">Input</a>]<p>
+    Applies a type-guard an rvalue of <code>NIL</code>.
+  </p>
+                </td>
+            </tr>
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="typetest2"><strong>ID</strong>: typetest2</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>error [<a href="HOTTypeTest2.Mod">Input</a>]<p>
+    Applies a type-guard an lvalue of <code>NIL</code>.  Note: I'm not
+    sure that applying a type guard to the target of an assignment
+    makes sense, but it is not illegal as far as I know.
+  </p>
+                </td>
+            </tr>
+
+  
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="alias1"><strong>ID</strong>: alias1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTAlias1.Mod">Input</a>]<p>
+    (OOC) An overeager SSA based compiler may discard the assignment
+    <code>b := a</code> without making sure that the assignment of the
+    first <code>Read</code> to <code>a</code> is saved across the
+    second <code>Read</code>.  The effect of such an error is that the
+    <code>Do</code> is called with two equal values.
+  </p>
+                </td>
+            </tr>
+  <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="alias2"><strong>ID</strong>: alias2</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTAlias2.Mod">Input</a>]<p>
+    (OOC) A variant of the testcase <code>alias1</code>, with the
+    added complication of type guards.
+  </p>
+                </td>
+            </tr>
 </table>
     </body>
 </html>
