@@ -500,7 +500,7 @@
             </tr>
             <tr>
                 <td colspan="3"><em>Type: </em>reject [<a href="HOTRecErr1.Mod">Input</a>]<p>
-        recursive type declaration
+        invalid type declaration
     </p>
                 </td>
             </tr>
@@ -510,7 +510,7 @@
             </tr>
             <tr>
                 <td colspan="3"><em>Type: </em>reject [<a href="HOTRecErr2.Mod">Input</a>]<p>
-        recursive type declaration
+        invalid type declaration
     </p>
                 </td>
             </tr>
@@ -520,7 +520,7 @@
             </tr>
             <tr>
                 <td colspan="3"><em>Type: </em>reject [<a href="HOTRecErr3.Mod">Input</a>]<p>
-        recursive type declaration
+        invalid type declaration
     </p>
                 </td>
             </tr>
@@ -530,7 +530,7 @@
             </tr>
             <tr>
                 <td colspan="3"><em>Type: </em>reject [<a href="HOTRecErr4.Mod">Input</a>]<p>
-        recursive type declaration
+        invalid type declaration
     </p>
                 </td>
             </tr>
@@ -540,7 +540,7 @@
             </tr>
             <tr>
                 <td colspan="3"><em>Type: </em>reject [<a href="HOTRecErr5.Mod">Input</a>]<p>
-        recursive type declaration
+        invalid type declaration
     </p>
                 </td>
             </tr>
@@ -550,7 +550,7 @@
             </tr>
             <tr>
                 <td colspan="3"><em>Type: </em>reject [<a href="HOTRecErr6.Mod">Input</a>]<p>
-        recursive type declaration
+        invalid type declaration
     </p>
                 </td>
             </tr>
@@ -560,7 +560,7 @@
             </tr>
             <tr>
                 <td colspan="3"><em>Type: </em>reject [<a href="HOTRecErr7.Mod">Input</a>]<p>
-        recursive type declaration
+        invalid type declaration
     </p>
                 </td>
             </tr>
@@ -570,7 +570,7 @@
             </tr>
             <tr>
                 <td colspan="3"><em>Type: </em>reject [<a href="HOTRecErr8.Mod">Input</a>]<p>
-        recursive type declaration
+        invalid type declaration
     </p>
                 </td>
             </tr>
@@ -653,6 +653,16 @@
             <tr>
                 <td colspan="3"><em>Type: </em>run [<a href="HOTProc3.Mod">Input</a>]<p>
         proc type returning a proc type, array of procedures
+    </p>
+                </td>
+            </tr>
+
+    <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="proc3FOR"><strong>ID</strong>: proc3FOR</a></td><td><strong>Languages</strong>: O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTProc3FOR.Mod">Input</a>]<p>
+        proc type returning a proc type, array of procedures (version with FOR)
     </p>
                 </td>
             </tr>
@@ -786,6 +796,16 @@
             <tr>
                 <td colspan="3"><em>Type: </em>run [<a href="HOTBuiltIn0.Mod">Input</a>]<p>
         CAP CHR ODD ABS ASH
+    </p>
+                </td>
+            </tr>
+
+    <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="builtInFunctions0FOR"><strong>ID</strong>: builtInFunctions0FOR</a></td><td><strong>Languages</strong>: O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTBuiltIn0FOR.Mod">Input</a>]<p>
+        CAP CHR ODD ABS ASH (FOR version)
     </p>
                 </td>
             </tr>
@@ -970,16 +990,6 @@
         <table width="100%" cellspacing="0" cellpadding="3" border="1">
 
     <tr bgcolor="#CCCCFF">
-                <td width="25%"><a name="for0"><strong>ID</strong>: for0</a></td><td><strong>Languages</strong>: O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
-            </tr>
-            <tr>
-                <td colspan="3"><em>Type: </em>run [<a href="HOTFor0.Mod">Input</a>]<p>
-        for statement
-    </p>
-                </td>
-            </tr>
-
-    <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="dynarr0"><strong>ID</strong>: dynarr0</a></td><td><strong>Languages</strong>: O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
             </tr>
             <tr>
@@ -1018,7 +1028,7 @@
             </tr>
 
     <tr bgcolor="#CCCCFF">
-                <td width="25%"><a name="for1"><strong>ID</strong>: for1</a></td><td><strong>Languages</strong>: O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
+                <td width="25%"><a name="for0"><strong>ID</strong>: for0</a></td><td><strong>Languages</strong>: O2 AO</td><td width="25%"><strong>Relevance</strong>: standard</td>
             </tr>
             <tr>
                 <td colspan="3"><em>Type: </em>run [<a href="HOTFor0.Mod">Input</a>]<p>
@@ -1082,6 +1092,28 @@
         <table width="100%" cellspacing="0" cellpadding="3" border="1">
 
     <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="const1"><strong>ID</strong>: const1</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTConst1.Mod">Input</a>]<p>
+        Test constant folding.
+        Informal, because typing of constants is not clearly defined in report
+    </p>
+                </td>
+            </tr>
+
+    <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="const2"><strong>ID</strong>: const2</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTConst2.Mod">Input</a>]<p>
+        Test constant folding.
+        Informal, because typing of constants is not clearly defined in report
+    </p>
+                </td>
+            </tr>
+
+    <tr bgcolor="#CCCCFF">
                 <td width="25%"><a name="sysarr0"><strong>ID</strong>: sysarr0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
             </tr>
             <tr>
@@ -1092,7 +1124,17 @@
             </tr>
     
     <tr bgcolor="#CCCCFF">
-                <td width="25%"><a name="specialCast0"><strong>ID</strong>: specialCast0</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
+                <td width="25%"><a name="sysarr0FOR"><strong>ID</strong>: sysarr0FOR</a></td><td><strong>Languages</strong>: O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTSysArr0FOR.Mod">Input</a>]<p>
+        ARRAY OF SYSTEM.BYTE (FOR version)
+    </p>
+                </td>
+            </tr>
+    
+    <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="specialCast0"><strong>ID</strong>: specialCast0</a></td><td><strong>Languages</strong>: O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
             </tr>
             <tr>
                 <td colspan="3"><em>Type: </em>reject [<a href="HOTSpecialCast0.Mod">Input</a>]<p>
@@ -1188,7 +1230,17 @@
             </tr>
 
     <tr bgcolor="#CCCCFF">
-                <td width="25%"><a name="duplicateFingerprint"><strong>ID</strong>: duplicateFingerprint</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
+                <td width="25%"><a name="sysBuiltin0FOR"><strong>ID</strong>: sysBuiltin0FOR</a></td><td><strong>Languages</strong>: O1 O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>Type: </em>run [<a href="HOTSysBuiltIn0FOR.Mod">Input</a>]<p>
+        (FOR version)
+    </p>
+                </td>
+            </tr>
+
+    <tr bgcolor="#CCCCFF">
+                <td width="25%"><a name="duplicateFingerprint"><strong>ID</strong>: duplicateFingerprint</a></td><td><strong>Languages</strong>: O2 AO</td><td width="25%"><strong>Relevance</strong>: informal</td>
             </tr>
             <tr>
                 <td colspan="3"><em>Type: </em>accept [<a href="HOTDuplFP.Mod">Input</a>]<p>
