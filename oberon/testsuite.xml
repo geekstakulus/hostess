@@ -137,7 +137,7 @@
         Old compiler bugs with integers. Make sure they are gone forever.
     </test>
 
-    <test id="boolexpr0" type="reject" file= "HOTBoolExpr0.Mod">
+    <test id="boolexpr0" type="run" file= "HOTBoolExpr0.Mod">
         Boolean Expressions
     </test>
 
