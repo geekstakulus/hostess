@@ -92,4 +92,17 @@
     sure that applying a type guard to the target of an assignment
     makes sense, but it is not illegal as far as I know.
   </test>
+
+  <!-- added 2001/09/29 mva -->
+  <test id="alias1" type="run" file= "HOTAlias1.Mod">
+    (OOC) An overeager SSA based compiler may discard the assignment
+    <code>b := a</code> without making sure that the assignment of the
+    first <code>Read</code> to <code>a</code> is saved across the
+    second <code>Read</code>.  The effect of such an error is that the
+    <code>Do</code> is called with two equal values.
+  </test>
+  <test id="alias2" type="run" file= "HOTAlias2.Mod">
+    (OOC) A variant of the testcase <code>alias1</code>, with the
+    added complication of type guards.
+  </test>
 </testcases>
