@@ -24,8 +24,8 @@ END Check;
 
 PROCEDURE Test0*;
 BEGIN
-	ASSERT(p1() = 1, 500);
-	ASSERT(p2() = 2, 501);
+	ASSERT(p1() = 1, 100);
+	ASSERT(p2() = 2, 101);
 END Test0;
 
 PROCEDURE Test1*;

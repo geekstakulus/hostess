@@ -20,21 +20,21 @@ END Set2x;
 PROCEDURE Test0*;
 BEGIN
 	Set := Set1x;
-	Set(1); ASSERT(x = 1, 500);
-	Set(2); ASSERT(x = 2, 501);
+	Set(1); ASSERT(x = 1, 100);
+	Set(2); ASSERT(x = 2, 101);
 	Set := Set2x;
-	Set(1); ASSERT(x = 2, 510);
-	Set(2); ASSERT(x = 4, 511);
+	Set(1); ASSERT(x = 2, 110);
+	Set(2); ASSERT(x = 4, 111);
 END Test0;
 
 PROCEDURE Test1*;
 BEGIN
 	SetA := Set1x;
-	SetA(1); ASSERT(x = 1, 500);
-	SetA(2); ASSERT(x = 2, 501);
+	SetA(1); ASSERT(x = 1, 120);
+	SetA(2); ASSERT(x = 2, 121);
 	SetA := Set2x;
-	SetA(1); ASSERT(x = 2, 510);
-	SetA(2); ASSERT(x = 4, 511);
+	SetA(1); ASSERT(x = 2, 130);
+	SetA(2); ASSERT(x = 4, 131);
 END Test1;
 
 PROCEDURE Test*;

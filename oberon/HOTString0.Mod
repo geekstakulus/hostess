@@ -4,7 +4,7 @@ PROCEDURE Test1*;
 VAR s: ARRAY 32 OF CHAR;
 BEGIN
 	s := "SomeString";
-	ASSERT(s = "SomeString", 100);
+	ASSERT(s = "SomeString", 110);
 END Test1;
 
 PROCEDURE Test2*;
@@ -13,21 +13,21 @@ VAR s0, s1: ARRAY 32 OF CHAR;
 BEGIN
 	s0 := c0;  s1 := c1;
 	
-	ASSERT(s0 # c1, 200);	(*check PCC.StringCmp, one of the ops must be a const!!!*)
-	ASSERT(s0 < c1, 201);
-	ASSERT(s0 <= c1, 202);
-	ASSERT(s0 <= c0, 203);
-	ASSERT(s1 > c0, 204);
-	ASSERT(s1 >= c0, 205);
-	ASSERT(s1 >= c1, 206);
+	ASSERT(s0 # c1, 120);	(*check PCC.StringCmp, one of the ops must be a const!!!*)
+	ASSERT(s0 < c1, 121);
+	ASSERT(s0 <= c1, 122);
+	ASSERT(s0 <= c0, 123);
+	ASSERT(s1 > c0, 124);
+	ASSERT(s1 >= c0, 125);
+	ASSERT(s1 >= c1, 126);
 
-	ASSERT(s0 # s1, 210);
-	ASSERT(s0 < s1, 211);
-	ASSERT(s0 <= s1, 212);
-	ASSERT(s0 <= s0, 213);
-	ASSERT(s1 > s0, 214);
-	ASSERT(s1 >= s0, 215);
-	ASSERT(s1 >= s1, 216);
+	ASSERT(s0 # s1, 130);
+	ASSERT(s0 < s1, 131);
+	ASSERT(s0 <= s1, 132);
+	ASSERT(s0 <= s0, 133);
+	ASSERT(s1 > s0, 134);
+	ASSERT(s1 >= s0, 135);
+	ASSERT(s1 >= s1, 136);
 END Test2;
 
 PROCEDURE Test3*;
@@ -35,19 +35,19 @@ VAR s0, s1: ARRAY 32 OF CHAR;
 BEGIN
 	s0 := "R";
 	s1 := "RDesc";
-	ASSERT(s0 < s1, 300);
-	ASSERT(s0 <= s1, 301);
-	ASSERT(s1 > s0, 302);
-	ASSERT(s1 >= s0, 303);
-	ASSERT(s1 # s0, 304);
-	ASSERT(s0 # s1, 305);
+	ASSERT(s0 < s1, 140);
+	ASSERT(s0 <= s1, 141);
+	ASSERT(s1 > s0, 142);
+	ASSERT(s1 >= s0, 143);
+	ASSERT(s1 # s0, 144);
+	ASSERT(s0 # s1, 145);
 
-	ASSERT(~(s0 < s0), 310);
-	ASSERT(s0 <= s0, 311);
-	ASSERT(~(s0 > s0), 312);
-	ASSERT(s0 >= s0, 313);
-	ASSERT(s0 = s0, 314);
-	ASSERT(~(s0 # s0), 315);
+	ASSERT(~(s0 < s0), 150);
+	ASSERT(s0 <= s0, 151);
+	ASSERT(~(s0 > s0), 152);
+	ASSERT(s0 >= s0, 153);
+	ASSERT(s0 = s0, 154);
+	ASSERT(~(s0 # s0), 155);
 END Test3;
 
 PROCEDURE Test*;

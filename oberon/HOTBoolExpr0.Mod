@@ -21,16 +21,16 @@ PROCEDURE Test2*;
 VAR a, b: LONGINT; x: BOOLEAN;
 BEGIN
 	a := 0; b := 0;
-	ASSERT( (a = 0) = (b = 0), 200);
-	x := (a = 0) = (b = 0);	ASSERT(x, 201);
+	ASSERT( (a = 0) = (b = 0), 20);
+	x := (a = 0) = (b = 0);	ASSERT(x, 21);
 	IF (a = 0) = (b = 0) THEN
 	ELSE
 		HALT(202)
 	END;
 
 	a := 1; b := 1;
-	ASSERT( (a = 0) = (b = 0), 210);
-	x := (a = 0) = (b = 0);	ASSERT(x, 211);
+	ASSERT( (a = 0) = (b = 0), 22);
+	x := (a = 0) = (b = 0);	ASSERT(x, 23);
 	IF (a = 0) = (b = 0) THEN
 	ELSE
 		HALT(212)

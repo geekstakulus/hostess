@@ -7,11 +7,11 @@ IMPORT
 PROCEDURE Test0*;
 BEGIN
 	HOTProc5A.Assign4x;
-	HOTProc5.Set(1); ASSERT(HOTProc5.x = 4, 500);
-	HOTProc5.Set(2); ASSERT(HOTProc5.x = 8, 501);
+	HOTProc5.Set(1); ASSERT(HOTProc5.x = 4, 100);
+	HOTProc5.Set(2); ASSERT(HOTProc5.x = 8, 101);
 	HOTProc5A.Assign5x;
-	HOTProc5.Set(1); ASSERT(HOTProc5.x = 5, 510);
-	HOTProc5.Set(2); ASSERT(HOTProc5.x = 10, 511);
+	HOTProc5.Set(1); ASSERT(HOTProc5.x = 5, 110);
+	HOTProc5.Set(2); ASSERT(HOTProc5.x = 10, 111);
 END Test0;
 
 PROCEDURE Test*;

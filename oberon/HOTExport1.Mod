@@ -8,7 +8,7 @@ IMPORT
 PROCEDURE Test0*;
 BEGIN
 	HOTExport0.a := 27;
-	ASSERT(HOTExport0.a = 27, 500)
+	ASSERT(HOTExport0.a = 27, 100)
 END Test0;
 
 PROCEDURE Test*;

@@ -107,9 +107,9 @@ PROCEDURE Test9*;
 VAR x0, x1: REAL;
 BEGIN
 	x0 := 1; x1 := 2;
-	ASSERT(x0-x1 = -1, 900);	(*ST - Mem *)
-	ASSERT(x0 - (x1+x1) = -3, 901);	(* ST(0) - ST(i) *)
-	ASSERT((x0+x0) - (x1 + x1) = -2, 902);	(* ST(i) - ST(0) *)
+	ASSERT(x0-x1 = -1, 100);	(*ST - Mem *)
+	ASSERT(x0 - (x1+x1) = -3, 101);	(* ST(0) - ST(i) *)
+	ASSERT((x0+x0) - (x1 + x1) = -2, 102);	(* ST(i) - ST(0) *)
 END Test9;
 
 PROCEDURE Test*;

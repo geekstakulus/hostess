@@ -18,9 +18,9 @@ END Check;
 
 PROCEDURE CheckV(VAR r: R0;  a, b, c: LONGINT);
 BEGIN
-	ASSERT(r.a = a, 200);
-	ASSERT(r.b = b, 201);
-	ASSERT(r.c = c, 202);
+	ASSERT(r.a = a, 110);
+	ASSERT(r.b = b, 111);
+	ASSERT(r.c = c, 112);
 END CheckV;
 
 PROCEDURE Set(VAR r: R0;  a, b, c: LONGINT);
@@ -36,9 +36,9 @@ BEGIN
 	CheckV(g0, 4, 5, 6);
 	
 	Set(g0, 13, 17, 19);
-	ASSERT(g0.a = 13, 300);
-	ASSERT(g0.b = 17, 301);
-	ASSERT(g0.c = 19, 302);
+	ASSERT(g0.a = 13, 120);
+	ASSERT(g0.b = 17, 121);
+	ASSERT(g0.c = 19, 122);
 	
 	Check(g0, 13, 17, 19);
 END Test1;
@@ -52,9 +52,9 @@ BEGIN
 	CheckV(l0, 4, 5, 6);
 	
 	Set(l0, 13, 17, 19);
-	ASSERT(l0.a = 13, 400);
-	ASSERT(l0.b = 17, 401);
-	ASSERT(l0.c = 19, 402);
+	ASSERT(l0.a = 13, 130);
+	ASSERT(l0.b = 17, 131);
+	ASSERT(l0.c = 19, 132);
 	
 	Check(l0, 13, 17, 19);
 END Test2;
@@ -70,9 +70,9 @@ BEGIN
 	Check(l1, 4, 5, 6);
 
 	Set(l0, 13, 17, 19);
-	ASSERT(l1.a = 13, 500);
-	ASSERT(l1.b = 17, 501);
-	ASSERT(l1.c = 19, 502);
+	ASSERT(l1.a = 13, 140);
+	ASSERT(l1.b = 17, 141);
+	ASSERT(l1.c = 19, 142);
 END Test3;
 
 PROCEDURE Test4*;

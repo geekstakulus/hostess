@@ -17,20 +17,20 @@ PROCEDURE Test1*;
 BEGIN
 	HOTProc4.SetX := HOTProc4.SetX0;
 	HOTProc4.SetX;
-	ASSERT(HOTProc4.x = 0, 500);
+	ASSERT(HOTProc4.x = 0, 100);
 	HOTProc4.SetX := HOTProc4.SetX1;
 	HOTProc4.SetX;
-	ASSERT(HOTProc4.x = 1, 501);
+	ASSERT(HOTProc4.x = 1, 101);
 END Test1;
 
 PROCEDURE Test2*;
 BEGIN
 	HOTProc4.SetX := SetX2;
 	HOTProc4.SetX;
-	ASSERT(HOTProc4.x = 2, 500);
+	ASSERT(HOTProc4.x = 2, 110);
 	HOTProc4.SetX := SetX3;
 	HOTProc4.SetX;
-	ASSERT(HOTProc4.x = 3, 501);
+	ASSERT(HOTProc4.x = 3, 111);
 END Test2;
 
 PROCEDURE Test*;

@@ -27,8 +27,8 @@ CONST
 VAR a, b: ARRAY 8 OF CHAR; c: ARRAY 16 OF CHAR;
 BEGIN
 	(* src <= dst *)
-	COPY(c01, a);  ASSERT(a = c01, 200);
-	b := c02;  COPY(b, a);  ASSERT(a = c02, 201);
+	COPY(c01, a);  ASSERT(a = c01, 110);
+	b := c02;  COPY(b, a);  ASSERT(a = c02, 111);
 	
 	(* src > dst *)
 	COPY(c10, a);  ASSERT(a = c10a, 202);
@@ -39,9 +39,9 @@ PROCEDURE TestMove*;
 VAR  a, b: LONGINT;
 BEGIN
 	a := 27;
-	SYSTEM.MOVE(SYSTEM.ADR(a), SYSTEM.ADR(b), 4);	ASSERT(b = a, 300);
+	SYSTEM.MOVE(SYSTEM.ADR(a), SYSTEM.ADR(b), 4);	ASSERT(b = a, 120);
 	a := 31;
-	SYSTEM.MOVE(SYSTEM.ADR(a), SYSTEM.ADR(b), 4);	ASSERT(b = a, 301);
+	SYSTEM.MOVE(SYSTEM.ADR(a), SYSTEM.ADR(b), 4);	ASSERT(b = a, 121);
 END TestMove;
 
 PROCEDURE TestPort;
@@ -63,12 +63,12 @@ VAR  x, val: LONGINT;  s: SHORTINT;  i: INTEGER;  l: LONGINT;
 BEGIN
 	x := SYSTEM.ADR(val);
 	val := 12345678H;
-	s := SYSTEM.GET8(x);	ASSERT(s = 78H, 100);
-	i := SYSTEM.GET16(x);	ASSERT(i = 5678H, 101);
-	l := SYSTEM.GET32(x);	ASSERT(l = 12345678H, 102);
+	s := SYSTEM.GET8(x);	ASSERT(s = 78H, 130);
+	i := SYSTEM.GET16(x);	ASSERT(i = 5678H, 131);
+	l := SYSTEM.GET32(x);	ASSERT(l = 12345678H, 132);
 	
-	SYSTEM.PUT16(x, s);	ASSERT(val = 12340078H, 103);
-	SYSTEM.PUT32(x, s);	ASSERT(val = 78H, 104);
+	SYSTEM.PUT16(x, s);	ASSERT(val = 12340078H, 133);
+	SYSTEM.PUT32(x, s);	ASSERT(val = 78H, 134);
 END TestGet;
 
 PROCEDURE TestTypeCode*;
@@ -90,10 +90,10 @@ BEGIN
 	SYSTEM.GETREG(SYSTEM.EBX, b);  
 	SYSTEM.GETREG(SYSTEM.ECX, c);  
 	SYSTEM.GETREG(SYSTEM.EDX, d); 
-	ASSERT(a=av, 300);
-	ASSERT(b=bv, 301);
-	ASSERT(c=cv, 302);
-	ASSERT(d=dv, 303);
+	ASSERT(a=av, 140);
+	ASSERT(b=bv, 141);
+	ASSERT(c=cv, 142);
+	ASSERT(d=dv, 143);
 END TestReg;
 
 PROCEDURE Test1*;
@@ -103,15 +103,15 @@ BEGIN
 	pix2[0] := 04X; pix2[1] := 08X; pix2[2] := 10X; pix2[3] := 12X;
 	x := SYSTEM.ADR(pix2);
 	pix :=  SYSTEM.VAL(Pixel, SYSTEM.GET32(x));
-	ASSERT(pix[0] = 04X, 200);
-	ASSERT(pix[1] = 08X, 201);
-	ASSERT(pix[2] = 10X, 202);
-	ASSERT(pix[3] = 12X, 203);
+	ASSERT(pix[0] = 04X, 150);
+	ASSERT(pix[1] = 08X, 151);
+	ASSERT(pix[2] = 10X, 152);
+	ASSERT(pix[3] = 12X, 153);
 	
 	FOR x := 0 TO 35 DO  meg2[x] := CHR(x)  END;
 	meg := meg2;
 	FOR x := 0 TO 35 DO
-		ASSERT(meg[x] = meg2[x], 300)
+		ASSERT(meg[x] = meg2[x], 154)
 	END
 END Test1;
 

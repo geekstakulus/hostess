@@ -17,10 +17,10 @@ PROCEDURE Test2*;	(*Stength Reduction*)
 VAR a, b, c: LONGINT;
 BEGIN
 	b := 12;
-	a := b DIV 1;	ASSERT(a = 12, 200);
-	a := b DIV 2;	ASSERT(a = 6, 201);
-	a := b DIV 3;	ASSERT(a = 4, 202);
-	a := b DIV 4;	ASSERT(a = 3, 203)
+	a := b DIV 1;	ASSERT(a = 12, 100);
+	a := b DIV 2;	ASSERT(a = 6, 101);
+	a := b DIV 3;	ASSERT(a = 4, 102);
+	a := b DIV 4;	ASSERT(a = 3, 103)
 END Test2;
 
 PROCEDURE Test3*;

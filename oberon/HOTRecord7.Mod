@@ -90,14 +90,14 @@ VAR r: R1;
 BEGIN
 	NEW(r);
 	SetR1(r, 45, 54, 63);
-	ASSERT(r.e = 45, 500);
-	ASSERT(r.f = 54, 501);
-	ASSERT(r.g = 63, 502);
+	ASSERT(r.e = 45, 1100);
+	ASSERT(r.f = 54, 111);
+	ASSERT(r.g = 63, 112);
 	
 	SetR1Bis(r, 89, 91, 93);
-	ASSERT(r.e = 89, 503);
-	ASSERT(r.f = 91, 504);
-	ASSERT(r.g = 93, 505);
+	ASSERT(r.e = 89, 113);
+	ASSERT(r.f = 91, 114);
+	ASSERT(r.g = 93, 115);
 END Test5;
 
 PROCEDURE Test*;
