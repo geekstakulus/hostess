@@ -110,7 +110,7 @@ PROCEDURE Test5;
 VAR i: LONGINT;
 BEGIN
 	i := 0;
-	WHILE i < (3*3 - 1) DO
+	WHILE i <= (3*3 - 1) DO
 		Check(ga[i DIV 3](1 + i MOD 3), 1 + i MOD 3, i);
 		INC(i)
 	END
