@@ -462,7 +462,7 @@
     type.
   </test>
 
-    <test id="for0" type="run" file= "HOTFor0.Mod" lang="O2 AO" >
+    <test id="for1" type="run" file= "HOTFor0.Mod" lang="O2 AO" >
         for statement
     </test>
 
